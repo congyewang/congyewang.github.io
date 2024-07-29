@@ -2,8 +2,6 @@ colorScheme = "congo"
 defaultAppearance = "light"
 autoSwitchAppearance = true
 
-defaultThemeColor = "#FFFFFF"
-
 enableSearch = true
 enableCodeCopy = true
 enableImageLazyLoading = true
