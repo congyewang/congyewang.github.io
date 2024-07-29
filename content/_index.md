@@ -1,0 +1,1 @@
+I am currently a PhD candidate at Newcastle University in the UK, working under the guidance of [Prof Chris Oates](https://oates.work/). My research interests are centered around computational statistics and probabilistic machine learning.

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Congye Wang</title>
+    <link>https://congyewang.github.io/</link>
+    <description>Recent content on Congye Wang</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 29 Jul 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://congyewang.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Contact</title>
+      <link>https://congyewang.github.io/contact/</link>
+      <pubDate>Mon, 29 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>https://congyewang.github.io/contact/</guid>
+      <description>Address #Room 3.25 Herschel Building&#xA;School of Mathematics, Statistics and Physics,&#xA;Newcastle University&#xA;Newcastle upon Tyne&#xA;NE1 7RU, UK&#xA;E-mails #firstname.lastname [at] outlook [dot] com (primary email)&#xA;C.lastname2 [at] newcastle [dot] ac [dot] uk (for matters related to NCL)</description>
+    </item>
+    <item>
+      <title>Papers</title>
+      <link>https://congyewang.github.io/papers/</link>
+      <pubDate>Mon, 29 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>https://congyewang.github.io/papers/</guid>
+      <description>Stein Π-Importance Sampling #Wang C, Chen WY, Kanagawa H, Oates CJ. Stein Π-Importance Sampling. Advances in Neural Information Processing Systems (NeurIPS 2023). [arXiv]&#xA;Selected for spotlight presentation.&#xA;Reinforcement Learning for Adaptive MCMC #Wang C, Chen W, Kanagawa H, Oates CJ. Reinforcement Learning for Adaptive MCMC. [arXiv]</description>
+    </item>
+    <item>
+      <title>Presentations</title>
+      <link>https://congyewang.github.io/presentations/</link>
+      <pubDate>Mon, 29 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>https://congyewang.github.io/presentations/</guid>
+      <description>2024 # Reinforcement Learning for Adaptive MCMC. London Meeting on Computational Statistics, University College London, UK. 11-13 Jun.&#xA;Stein Π-Importance Sampling. SAgE PGR Conference, Newcastle University, UK. &amp;amp; 23-26 Jan.&#xA;2023 # Stein Π-Importance Sampling. Conference on Neural Information Processing Systems, New Orleans Ernest N. Morial Convention Centre, US. &amp;amp; 10-16 Dec.&#xA;Stein Π-Importance Sampling. Distance-based methods in Machine Learning, University College London, UK. &amp;amp; 27-28 Jun.&#xA;Application of Inverse Reinforcement Learning in Automatic Music Generation.</description>
+    </item>
+    <item>
+      <title>Professional</title>
+      <link>https://congyewang.github.io/professional/</link>
+      <pubDate>Mon, 29 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>https://congyewang.github.io/professional/</guid>
+      <description>Education # 2022 - Present PhD Mathematics, Newcastle University, UK.&#xA;2020 - 2021 MSc Statistics, Lancaster University, UK.&#xA;2016 - 2020 BSc Accounting &amp;amp; BSc Statistics, Northeast Agricultural University, China.&#xA;Reviewing Services #2024 # Asian Conference on Machine Learning Teaching Services #2024 # ACC1012: Professional Skills for Accounting and Finance, Newcastle University (Teaching Assistant)&#xA;ACC1053: Introductory Quantitative Methods and Principles of Taxation, Newcastle University (Teaching Assistant)&#xA;MAS2902: Introduction to Regression and Stochastic Modelling, Newcastle University (Teaching Assistant)</description>
+    </item>
+  </channel>
+</rss>

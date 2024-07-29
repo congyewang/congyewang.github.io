@@ -1,0 +1,18 @@
+languageCode = "en"
+languageName = "English"
+languageDirection = "ltr"
+weight = 1
+
+title = "Congye Wang"
+
+[params]
+  dateFormat = "2 January 2006"
+
+[params.author]
+name = "Congye Wang"
+image = "img/author.jpg"
+links = [
+  { github = "https://github.com/congyewang" },
+  { linkedin = "https://www.linkedin.com/in/congyewang" },
+  { google-scholar = "https://scholar.google.com/citations?user=nyt9y-UAAAAJ" }
+]

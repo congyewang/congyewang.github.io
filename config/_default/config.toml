@@ -1,0 +1,5 @@
+baseURL = "https://congyewang.github.io/"
+languageCode = "en"
+defaultContentLanguage = "en"
+enableRobotsTXT = false
+theme = 'congo'
