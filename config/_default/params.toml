@@ -2,7 +2,7 @@ colorScheme = "congo"
 defaultAppearance = "light"
 autoSwitchAppearance = true
 
-enableSearch = true
+enableSearch = false
 enableCodeCopy = true
 enableImageLazyLoading = true
 enableImageWebp = true
