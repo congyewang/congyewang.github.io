@@ -1,46 +1,46 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Congye Wang</title>
-    <link>http://localhost:1313/</link>
-    <description>Recent content on Congye Wang</description>
+    <title>Profile on Congye Wang</title>
+    <link>https://congyewang.github.io/</link>
+    <description>Recent content in Profile on Congye Wang</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Wed, 31 Jul 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://congyewang.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Install GCC 6.3.0 on Ubuntu</title>
-      <link>http://localhost:1313/posts/gcc6_compiling/</link>
+      <link>https://congyewang.github.io/posts/gcc6_compiling/</link>
       <pubDate>Wed, 31 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/gcc6_compiling/</guid>
+      <guid>https://congyewang.github.io/posts/gcc6_compiling/</guid>
       <description># Create GCC Storage Directory sudo mkdir /usr/local/gcc # Download the Source Code of GCC6.3.0 cd ~/Downloads wget https://ftp.gnu.org/gnu/gcc/gcc-6.3.0/gcc-6.3.0.tar.gz # Decompression tar -zxf gcc-6.3.0.tar.gz # Download and Compile Dependencies ./contrib/download_prerequisites # Configuring Compilation Options ./configure --prefix=/usr/local/gcc/gcc-6.3.0 --enable-threads=posix --disable-checking --disable-multilib --enable-languages=c,c++ --disable-libsanitizer # Compile the Source Code make # Fix GCC6.3.0 Source Compile Error # error: dereferencing pointer to incomplete type ‘struct ucontext’ (GCC8.1 does not have this error). vim ./x86_64-pc-linux-gnu/libgcc/md-unwind-support.h # Skip to Line 61 and Replace with struct ucontext_t *uc_ = context-&amp;gt;cfa; # Installing sudo make install # View system GCC and G++ locations which gcc # Adding Common Versions to the GCC and G++ Version Managers sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-11 110 sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-11 110 # Setting Up a Soft Link for GCC-6.</description>
     </item>
     <item>
       <title>Contact</title>
-      <link>http://localhost:1313/contact/</link>
+      <link>https://congyewang.github.io/contact/</link>
       <pubDate>Mon, 29 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/contact/</guid>
+      <guid>https://congyewang.github.io/contact/</guid>
       <description>Address #Room 3.25 Herschel Building&#xA;School of Mathematics, Statistics and Physics,&#xA;Newcastle University&#xA;Newcastle upon Tyne&#xA;NE1 7RU, UK&#xA;E-mails #firstname.lastname [at] outlook [dot] com (primary email)&#xA;C.lastname2 [at] newcastle [dot] ac [dot] uk (for matters related to NCL)</description>
     </item>
     <item>
       <title>Papers</title>
-      <link>http://localhost:1313/papers/</link>
+      <link>https://congyewang.github.io/papers/</link>
       <pubDate>Mon, 29 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/papers/</guid>
+      <guid>https://congyewang.github.io/papers/</guid>
       <description>Reinforcement Learning for Adaptive MCMC #Wang C, Chen W, Kanagawa H, Oates CJ. Reinforcement Learning for Adaptive MCMC. [arXiv]&#xA;Stein Π-Importance Sampling #Wang C, Chen WY, Kanagawa H, Oates CJ. Stein Π-Importance Sampling. Advances in Neural Information Processing Systems (NeurIPS 2023). [arXiv]&#xA;Selected for spotlight presentation.</description>
     </item>
     <item>
       <title>Presentations</title>
-      <link>http://localhost:1313/presentations/</link>
+      <link>https://congyewang.github.io/presentations/</link>
       <pubDate>Mon, 29 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/presentations/</guid>
+      <guid>https://congyewang.github.io/presentations/</guid>
       <description>2024 # Reinforcement Learning for Adaptive MCMC. London Meeting on Computational Statistics, University College London, UK. 11-13 Jun.&#xA;Stein Π-Importance Sampling. SAgE PGR Conference, Newcastle University, UK. &amp;amp; 23-26 Jan.&#xA;2023 # Stein Π-Importance Sampling. Conference on Neural Information Processing Systems, New Orleans Ernest N. Morial Convention Centre, US. &amp;amp; 10-16 Dec.&#xA;Stein Π-Importance Sampling. Distance-based methods in Machine Learning, University College London, UK. &amp;amp; 27-28 Jun.&#xA;Application of Inverse Reinforcement Learning in Automatic Music Generation.</description>
     </item>
     <item>
       <title>Professional</title>
-      <link>http://localhost:1313/professional/</link>
+      <link>https://congyewang.github.io/professional/</link>
       <pubDate>Mon, 29 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/professional/</guid>
+      <guid>https://congyewang.github.io/professional/</guid>
       <description>Education # 2022 - Present PhD Mathematics, Newcastle University, UK.&#xA;2020 - 2021 MSc Statistics, Lancaster University, UK.&#xA;2016 - 2020 BSc Accounting &amp;amp; BSc Statistics, Northeast Agricultural University, China.&#xA;Reviewing Services #2024 # Asian Conference on Machine Learning Teaching Services #2024 # ACC1012: Professional Skills for Accounting and Finance, Newcastle University (Teaching Assistant)&#xA;ACC1053: Introductory Quantitative Methods and Principles of Taxation, Newcastle University (Teaching Assistant)&#xA;MAS2902: Introduction to Regression and Stochastic Modelling, Newcastle University (Teaching Assistant)</description>
     </item>
   </channel>

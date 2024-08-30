@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Congye Wang</title>
-    <link>http://localhost:1313/posts/</link>
+    <link>https://congyewang.github.io/posts/</link>
     <description>Recent content in Posts on Congye Wang</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Wed, 31 Jul 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://congyewang.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Install GCC 6.3.0 on Ubuntu</title>
-      <link>http://localhost:1313/posts/gcc6_compiling/</link>
+      <link>https://congyewang.github.io/posts/gcc6_compiling/</link>
       <pubDate>Wed, 31 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/gcc6_compiling/</guid>
+      <guid>https://congyewang.github.io/posts/gcc6_compiling/</guid>
       <description># Create GCC Storage Directory sudo mkdir /usr/local/gcc # Download the Source Code of GCC6.3.0 cd ~/Downloads wget https://ftp.gnu.org/gnu/gcc/gcc-6.3.0/gcc-6.3.0.tar.gz # Decompression tar -zxf gcc-6.3.0.tar.gz # Download and Compile Dependencies ./contrib/download_prerequisites # Configuring Compilation Options ./configure --prefix=/usr/local/gcc/gcc-6.3.0 --enable-threads=posix --disable-checking --disable-multilib --enable-languages=c,c++ --disable-libsanitizer # Compile the Source Code make # Fix GCC6.3.0 Source Compile Error # error: dereferencing pointer to incomplete type ‘struct ucontext’ (GCC8.1 does not have this error). vim ./x86_64-pc-linux-gnu/libgcc/md-unwind-support.h # Skip to Line 61 and Replace with struct ucontext_t *uc_ = context-&amp;gt;cfa; # Installing sudo make install # View system GCC and G++ locations which gcc # Adding Common Versions to the GCC and G++ Version Managers sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-11 110 sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-11 110 # Setting Up a Soft Link for GCC-6.</description>
     </item>
   </channel>
