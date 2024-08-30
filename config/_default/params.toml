@@ -23,3 +23,6 @@ fingerprintAlgorithm = "sha256"
   layout = "profile" # valid options: page, profile, custom
   showRecent = false
   recentLimit = 5
+
+[verification]
+google = "googlea241c411da65c6ef.html"
