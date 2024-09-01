@@ -3,7 +3,7 @@ title: "Profile"
 date: "29 Jul 2024"
 ---
 
-I am currently a PhD candidate at Newcastle University in the UK, working under the guidance of [Prof Chris Oates](https://oates.work/). My research interests are centered around computational statistics and probabilistic machine learning.
+I am presently a third-year PhD candidate pursuing a degree in Mathematics at Newcastle University in the UK, under the supervision of [Professor Chris Oates](https://oates.work/). My research primarily concentrates on computational statistics and probabilistic machine learning.
 
 {{< left >}}
 ### News
