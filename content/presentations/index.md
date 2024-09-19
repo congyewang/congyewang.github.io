@@ -6,6 +6,8 @@ date: "29 Jul 2024"
 
 ## 2024
 
+- Reinforcement Learning for Adaptive MCMC. [BayesAI Conference](https://bayesaiworkshop.github.io), Lancaster University, UK. 23-26 Sep.
+
 - Reinforcement Learning for Adaptive MCMC. [London Meeting on Computational Statistics](https://www.ucl.ac.uk/mathematical-statistical-sciences/events/2024/jun/london-meeting-computational-statistics), University College London, UK. 11-13 Jun.
 
 - Stein Π-Importance Sampling. SAgE PGR Conference, Newcastle University, UK. &  23-26 Jan.
