@@ -10,4 +10,6 @@ I am presently a third-year PhD candidate pursuing a degree in Mathematics at Ne
 
 - Our research on [**Stein Π-Importance Sampling**](https://arxiv.org/abs/2305.10068) has been accepted as a spotlight presentation at NeurIPS!
 
+- Our team won the [**Data for Good 2024 competition**](https://www.linkedin.com/jobs/view/data-for-good-london-at-jpmorganchase-4003478806/) at J.P. Morgan in London!
+
 {{< /left >}}
