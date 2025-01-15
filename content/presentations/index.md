@@ -4,7 +4,7 @@ date: "29 Jul 2024"
 ---
 
 
-# 2025
+## 2025
 
 - Reinforcement Learning for Adaptive MCMC. [UQSay Seminar Series](https://www.uqsay.org/2025/01/uqsay-81.html), Paris Saclay, France. 23 Jan.
 
