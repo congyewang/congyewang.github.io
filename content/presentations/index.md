@@ -8,7 +8,7 @@ date: "29 Jul 2024"
 
 - Reinforcement Learning for Adaptive MCMC. [UQSay Seminar Series](https://www.uqsay.org/2025/01/uqsay-81.html), Paris Saclay, France. 23 Jan.
 
-- Reinforcement Learning for Adaptive MCMC. SAgE PGR Conference, Newcastle University, UK. 22 Jan.
+- Reinforcement Learning for Adaptive MCMC. SAgE PGR Conference, Newcastle University, UK. 21-23 Jan.
 
 ## 2024
 
