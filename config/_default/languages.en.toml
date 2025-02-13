@@ -14,5 +14,6 @@ image = "img/author.jpg"
 links = [
   { github = "https://github.com/congyewang" },
   { linkedin = "https://www.linkedin.com/in/congyewang" },
-  { google-scholar = "https://scholar.google.com/citations?user=nyt9y-UAAAAJ" }
+  { google-scholar = "https://scholar.google.com/citations?user=nyt9y-UAAAAJ" },
+  { orcid = "https://orcid.org/0009-0001-0167-1362"}
 ]
