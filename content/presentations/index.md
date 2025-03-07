@@ -8,7 +8,9 @@ date: "29 Jul 2024"
 
 - Reinforcement Learning for Adaptive MCMC. [AISTATS](https://aistats.org/aistats2025/index.html), Mai Khao, Thailand. 3-5 May.
 
-- Reinforcement Learning for Adaptive MCMC. [UQSay Seminar Series](https://www.uqsay.org/2025/01/uqsay-81.html), Paris Saclay, France. 23 Jan.
+- Reinforcement Learning for Adaptive MCMC. [BAYSM](https://baysm2025.github.io/), Online Event, 7-11 April.
+
+- Reinforcement Learning for Adaptive MCMC. [UQSay Seminar Series](https://www.uqsay.org/2025/01/uqsay-81.html), Université Paris Saclay, France. 23 Jan.
 
 - Reinforcement Learning for Adaptive MCMC. [SAgE PGR Conference](https://conferences.ncl.ac.uk/sagepgrconf/), Newcastle University, UK. 21-23 Jan.
 

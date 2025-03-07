@@ -13,6 +13,10 @@ date: "29 Jul 2024"
 
 ## Reviewing Services
 
+### 2025
+
+- Asian Conference on Machine Learning
+
 ### 2024
 
 - Asian Conference on Machine Learning
