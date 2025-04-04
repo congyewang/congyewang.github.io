@@ -15,6 +15,8 @@ date: "29 Jul 2024"
 
 ### 2025
 
+- Uncertainty in Artificial Intelligence
+
 - Asian Conference on Machine Learning
 
 ### 2024
