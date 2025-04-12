@@ -15,6 +15,8 @@ date: "29 Jul 2024"
 
 ### 2025
 
+- Conference on Neural Information Processing Systems
+
 - Uncertainty in Artificial Intelligence
 
 - Asian Conference on Machine Learning
