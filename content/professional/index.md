@@ -1,6 +1,6 @@
 ---
 title: "Professional"
-date: "29 Jul 2024"
+date: "28 Jun 2025"
 ---
 
 ## Education
@@ -13,17 +13,13 @@ date: "29 Jul 2024"
 
 ## Reviewing Services
 
-### 2025
+- Conference on Neural Information Processing Systems (NeurIPS)
 
-- Conference on Neural Information Processing Systems
+- Uncertainty in Artificial Intelligence (UAI)
 
-- Uncertainty in Artificial Intelligence
+- Asian Conference on Machine Learning (ACML)
 
-- Asian Conference on Machine Learning
-
-### 2024
-
-- Asian Conference on Machine Learning
+- Machine Learning
 
 ## Teaching Services
 

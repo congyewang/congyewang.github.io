@@ -6,8 +6,15 @@
     <description>Recent content in Profile on Congye Wang</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 31 Jul 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 28 Jun 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://congyewang.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Professional</title>
+      <link>https://congyewang.github.io/professional/</link>
+      <pubDate>Sat, 28 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://congyewang.github.io/professional/</guid>
+      <description>Education # 2022 - Present PhD Mathematics, Newcastle University, UK.&#xA;2020 - 2021 MSc Statistics, Lancaster University, UK.&#xA;2016 - 2020 BSc Accounting &amp;amp; BSc Statistics, Northeast Agricultural University, China.&#xA;Reviewing Services # Conference on Neural Information Processing Systems (NeurIPS)&#xA;Uncertainty in Artificial Intelligence (UAI)&#xA;Asian Conference on Machine Learning (ACML)&#xA;Machine Learning&#xA;Teaching Services #2024 # ACC1012: Professional Skills for Accounting and Finance, Newcastle University (Teaching Assistant)&#xA;ACC1053: Introductory Quantitative Methods and Principles of Taxation, Newcastle University (Teaching Assistant)</description>
+    </item>
     <item>
       <title>Install GCC 6.3.0 on Ubuntu</title>
       <link>https://congyewang.github.io/posts/gcc6_compiling/</link>
@@ -35,13 +42,6 @@
       <pubDate>Mon, 29 Jul 2024 00:00:00 +0000</pubDate>
       <guid>https://congyewang.github.io/presentations/</guid>
       <description>2025 # Reinforcement Learning for Adaptive MCMC. AISTATS, Mai Khao, Thailand. 3-5 May.&#xA;Reinforcement Learning for Adaptive MCMC. BAYSM, Online Event, 7-11 April.&#xA;Reinforcement Learning for Adaptive MCMC. UQSay Seminar Series, Université Paris Saclay, France. 23 Jan.&#xA;Reinforcement Learning for Adaptive MCMC. SAgE PGR Conference, Newcastle University, UK. 21-23 Jan.&#xA;2024 # Reinforcement Learning for Adaptive MCMC. Next-Generational Extrapolation Methods, Newcastle University, UK. 18-22 Nov.&#xA;Reinforcement Learning for Adaptive MCMC. BayesAI Conference, Lancaster University, UK.</description>
-    </item>
-    <item>
-      <title>Professional</title>
-      <link>https://congyewang.github.io/professional/</link>
-      <pubDate>Mon, 29 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>https://congyewang.github.io/professional/</guid>
-      <description>Education # 2022 - Present PhD Mathematics, Newcastle University, UK.&#xA;2020 - 2021 MSc Statistics, Lancaster University, UK.&#xA;2016 - 2020 BSc Accounting &amp;amp; BSc Statistics, Northeast Agricultural University, China.&#xA;Reviewing Services #2025 # Conference on Neural Information Processing Systems&#xA;Uncertainty in Artificial Intelligence&#xA;Asian Conference on Machine Learning&#xA;2024 # Asian Conference on Machine Learning Teaching Services #2024 # ACC1012: Professional Skills for Accounting and Finance, Newcastle University (Teaching Assistant)</description>
     </item>
   </channel>
 </rss>
