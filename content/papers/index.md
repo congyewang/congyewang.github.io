@@ -3,6 +3,11 @@ title: "Papers"
 date: "29 Jul 2024"
 ---
 
+## Harnessing the Power of Reinforcement Learning for Adaptive MCMC
+
+Wang, C., Fisher, M. A., Kanagawa, H., Chen, W., and Oates, C. J. (2025). *Harnessing the power of reinforcement learning for
+adaptive mcmc*. [[arXiv]](https://arxiv.org/abs/2507.00671)
+
 ## Reinforcement Learning for Adaptive MCMC
 
 Wang C, Chen W, Kanagawa H, Oates CJ. *Reinforcement Learning for Adaptive MCMC*. Artificial Intelligence and Statistics (AISTATS 2025). [[arXiv]](https://arxiv.org/abs/2405.13574)
