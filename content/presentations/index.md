@@ -6,6 +6,10 @@ date: "29 Jul 2024"
 
 ## 2025
 
+- Harnessing the Power of Reinforcement Learning for Adaptive MCMC. [Kernels, Flows and Sampling](https://sites.google.com/view/kernels-flows-and-sampling/home), Newcastle University, UK. 22 Oct.
+
+- Harnessing the Power of Reinforcement Learning for Adaptive MCMC. [Non-Reversible Sampling: Robustness⋅Methodology⋅Applications](https://sites.google.com/view/probai-workshop-newcastle), Newcastle University, UK. 8-10 Sep.
+
 - Reinforcement Learning for Adaptive MCMC. [AISTATS](https://aistats.org/aistats2025/index.html), Mai Khao, Thailand. 3-5 May.
 
 - Reinforcement Learning for Adaptive MCMC. [BAYSM](https://baysm2025.github.io/), Online Event, 7-11 April.
