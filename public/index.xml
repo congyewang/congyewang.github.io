@@ -43,12 +43,5 @@
       <guid>https://congyewang.github.io/presentations/</guid>
       <description>2025 # Harnessing the Power of Reinforcement Learning for Adaptive MCMC. Kernels, Flows and Sampling, Newcastle University, UK. 22 Oct.&#xA;Harnessing the Power of Reinforcement Learning for Adaptive MCMC. Non-Reversible Sampling: Robustness⋅Methodology⋅Applications, Newcastle University, UK. 8-10 Sep.&#xA;Reinforcement Learning for Adaptive MCMC. AISTATS, Mai Khao, Thailand. 3-5 May.&#xA;Reinforcement Learning for Adaptive MCMC. BAYSM, Online Event, 7-11 April.&#xA;Reinforcement Learning for Adaptive MCMC. UQSay Seminar Series, Université Paris Saclay, France. 23 Jan.</description>
     </item>
-    <item>
-      <title></title>
-      <link>https://congyewang.github.io/posts/pytorch_ppc64le/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://congyewang.github.io/posts/pytorch_ppc64le/</guid>
-      <description>Compilling PyTorch on Power9 ppc64le #1. Environment Preparation ## Prepare Environment ## Create Python Environment micromamba create -y -n pytorch python=3.12 ## Create Folders mkdir -p ~/Software/ppc64le/magma mkdir -p ~/Wheels/ppc64le ## Set qQuad Precision (Float128) export CFLAGS=&amp;#34;-mfloat128&amp;#34; export LDFLAGS=&amp;#34;-lquadmath&amp;#34; 2. Installing Magma ## Magma cd ~/Wheels/ppc64le ## Clone Magma (v2.9.0) git clone https://github.com/icl-utk-edu/magma.git cd magma git checkout v2.9.0 ## Config Magma cd magma echo -e &amp;#39;BACKEND = cuda\nGPU_TARGET = Volta Turing&amp;#39; &amp;gt; make.</description>
-    </item>
   </channel>
 </rss>

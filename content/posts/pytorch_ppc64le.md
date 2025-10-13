@@ -1,4 +1,7 @@
-# Compilling PyTorch on Power9 ppc64le
+---
+title: "Compilling PyTorch on Power9 ppc64le"
+date: "14 Oct 2025"
+---
 
 ## 1. Environment Preparation
 
