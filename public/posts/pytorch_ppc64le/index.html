@@ -17,8 +17,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#FFFFFF" />
   
-  <title>Install GCC 6.3.0 on Ubuntu &middot; Congye Wang</title>
-    <meta name="title" content="Install GCC 6.3.0 on Ubuntu &middot; Congye Wang" />
+  <title> &middot; Congye Wang</title>
+    <meta name="title" content=" &middot; Congye Wang" />
   
   
   
@@ -71,14 +71,14 @@
     name="description"
     content="
       
-        # Create GCC Storage Directory sudo mkdir /usr/local/gcc # Download the Source Code of GCC6.3.0 cd ~/Downloads wget https://ftp.gnu.org/gnu/gcc/gcc-6.3.0/gcc-6.3.0.tar.gz # Decompression tar -zxf gcc-6.3.0.tar.gz # Download and Compile Dependencies ./contrib/download_prerequisites # Configuring Compilation Options ./configure --prefix=/usr/local/gcc/gcc-6.3.0 --enable-threads=posix --disable-checking --disable-multilib --enable-languages=c,c&#43;&#43; --disable-libsanitizer # Compile the Source Code make # Fix GCC6.3.0 Source Compile Error # error: dereferencing pointer to incomplete type ‘struct ucontext’ (GCC8.1 does not have this error). vim ./x86_64-pc-linux-gnu/libgcc/md-unwind-support.h # Skip to Line 61 and Replace with struct ucontext_t *uc_ = context-&gt;cfa; # Installing sudo make install # View system GCC and G&#43;&#43; locations which gcc # Adding Common Versions to the GCC and G&#43;&#43; Version Managers sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-11 110 sudo update-alternatives --install /usr/bin/g&#43;&#43; g&#43;&#43; /usr/bin/g&#43;&#43;-11 110 # Setting Up a Soft Link for GCC-6.
+        Compilling PyTorch on Power9 ppc64le #1. Environment Preparation ## Prepare Environment ## Create Python Environment micromamba create -y -n pytorch python=3.12 ## Create Folders mkdir -p ~/Software/ppc64le/magma mkdir -p ~/Wheels/ppc64le ## Set qQuad Precision (Float128) export CFLAGS=&#34;-mfloat128&#34; export LDFLAGS=&#34;-lquadmath&#34; 2. Installing Magma ## Magma cd ~/Wheels/ppc64le ## Clone Magma (v2.9.0) git clone https://github.com/icl-utk-edu/magma.git cd magma git checkout v2.9.0 ## Config Magma cd magma echo -e &#39;BACKEND = cuda\nGPU_TARGET = Volta Turing&#39; &gt; make.
       
     "
   />
   
   
   
-  <link rel="canonical" href="https://congyewang.github.io/posts/gcc6_compiling/" />
+  <link rel="canonical" href="https://congyewang.github.io/posts/pytorch_ppc64le/" />
   
   
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -95,20 +95,18 @@
   
   
   
-  <meta property="og:url" content="https://congyewang.github.io/posts/gcc6_compiling/">
+  <meta property="og:url" content="https://congyewang.github.io/posts/pytorch_ppc64le/">
   <meta property="og:site_name" content="Congye Wang">
-  <meta property="og:title" content="Install GCC 6.3.0 on Ubuntu">
-  <meta property="og:description" content="# Create GCC Storage Directory sudo mkdir /usr/local/gcc # Download the Source Code of GCC6.3.0 cd ~/Downloads wget https://ftp.gnu.org/gnu/gcc/gcc-6.3.0/gcc-6.3.0.tar.gz # Decompression tar -zxf gcc-6.3.0.tar.gz # Download and Compile Dependencies ./contrib/download_prerequisites # Configuring Compilation Options ./configure --prefix=/usr/local/gcc/gcc-6.3.0 --enable-threads=posix --disable-checking --disable-multilib --enable-languages=c,c&#43;&#43; --disable-libsanitizer # Compile the Source Code make # Fix GCC6.3.0 Source Compile Error # error: dereferencing pointer to incomplete type ‘struct ucontext’ (GCC8.1 does not have this error). vim ./x86_64-pc-linux-gnu/libgcc/md-unwind-support.h # Skip to Line 61 and Replace with struct ucontext_t *uc_ = context-&gt;cfa; # Installing sudo make install # View system GCC and G&#43;&#43; locations which gcc # Adding Common Versions to the GCC and G&#43;&#43; Version Managers sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-11 110 sudo update-alternatives --install /usr/bin/g&#43;&#43; g&#43;&#43; /usr/bin/g&#43;&#43;-11 110 # Setting Up a Soft Link for GCC-6.">
+  <meta property="og:title" content="Congye Wang">
+  <meta property="og:description" content="Compilling PyTorch on Power9 ppc64le #1. Environment Preparation ## Prepare Environment ## Create Python Environment micromamba create -y -n pytorch python=3.12 ## Create Folders mkdir -p ~/Software/ppc64le/magma mkdir -p ~/Wheels/ppc64le ## Set qQuad Precision (Float128) export CFLAGS=&#34;-mfloat128&#34; export LDFLAGS=&#34;-lquadmath&#34; 2. Installing Magma ## Magma cd ~/Wheels/ppc64le ## Clone Magma (v2.9.0) git clone https://github.com/icl-utk-edu/magma.git cd magma git checkout v2.9.0 ## Config Magma cd magma echo -e &#39;BACKEND = cuda\nGPU_TARGET = Volta Turing&#39; &gt; make.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2024-07-31T00:00:00+00:00">
-    <meta property="article:modified_time" content="2024-07-31T00:00:00+00:00">
 
   
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Install GCC 6.3.0 on Ubuntu">
-  <meta name="twitter:description" content="# Create GCC Storage Directory sudo mkdir /usr/local/gcc # Download the Source Code of GCC6.3.0 cd ~/Downloads wget https://ftp.gnu.org/gnu/gcc/gcc-6.3.0/gcc-6.3.0.tar.gz # Decompression tar -zxf gcc-6.3.0.tar.gz # Download and Compile Dependencies ./contrib/download_prerequisites # Configuring Compilation Options ./configure --prefix=/usr/local/gcc/gcc-6.3.0 --enable-threads=posix --disable-checking --disable-multilib --enable-languages=c,c&#43;&#43; --disable-libsanitizer # Compile the Source Code make # Fix GCC6.3.0 Source Compile Error # error: dereferencing pointer to incomplete type ‘struct ucontext’ (GCC8.1 does not have this error). vim ./x86_64-pc-linux-gnu/libgcc/md-unwind-support.h # Skip to Line 61 and Replace with struct ucontext_t *uc_ = context-&gt;cfa; # Installing sudo make install # View system GCC and G&#43;&#43; locations which gcc # Adding Common Versions to the GCC and G&#43;&#43; Version Managers sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-11 110 sudo update-alternatives --install /usr/bin/g&#43;&#43; g&#43;&#43; /usr/bin/g&#43;&#43;-11 110 # Setting Up a Soft Link for GCC-6.">
+  <meta name="twitter:title" content="Congye Wang">
+  <meta name="twitter:description" content="Compilling PyTorch on Power9 ppc64le #1. Environment Preparation ## Prepare Environment ## Create Python Environment micromamba create -y -n pytorch python=3.12 ## Create Folders mkdir -p ~/Software/ppc64le/magma mkdir -p ~/Wheels/ppc64le ## Set qQuad Precision (Float128) export CFLAGS=&#34;-mfloat128&#34; export LDFLAGS=&#34;-lquadmath&#34; 2. Installing Magma ## Magma cd ~/Wheels/ppc64le ## Clone Magma (v2.9.0) git clone https://github.com/icl-utk-edu/magma.git cd magma git checkout v2.9.0 ## Config Magma cd magma echo -e &#39;BACKEND = cuda\nGPU_TARGET = Volta Turing&#39; &gt; make.">
 
   
   <script type="application/ld+json">
@@ -116,26 +114,26 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Posts",
-    "name": "Install GCC 6.3.0 on Ubuntu",
-    "headline": "Install GCC 6.3.0 on Ubuntu",
+    "name": "",
+    "headline": "",
     
-    "abstract": "# Create GCC Storage Directory sudo mkdir \/usr\/local\/gcc # Download the Source Code of GCC6.3.0 cd ~\/Downloads wget https:\/\/ftp.gnu.org\/gnu\/gcc\/gcc-6.3.0\/gcc-6.3.0.tar.gz # Decompression tar -zxf gcc-6.3.0.tar.gz # Download and Compile Dependencies .\/contrib\/download_prerequisites # Configuring Compilation Options .\/configure --prefix=\/usr\/local\/gcc\/gcc-6.3.0 --enable-threads=posix --disable-checking --disable-multilib --enable-languages=c,c\u002b\u002b --disable-libsanitizer # Compile the Source Code make # Fix GCC6.3.0 Source Compile Error # error: dereferencing pointer to incomplete type ‘struct ucontext’ (GCC8.1 does not have this error). vim .\/x86_64-pc-linux-gnu\/libgcc\/md-unwind-support.h # Skip to Line 61 and Replace with struct ucontext_t *uc_ = context-\u0026gt;cfa; # Installing sudo make install # View system GCC and G\u002b\u002b locations which gcc # Adding Common Versions to the GCC and G\u002b\u002b Version Managers sudo update-alternatives --install \/usr\/bin\/gcc gcc \/usr\/bin\/gcc-11 110 sudo update-alternatives --install \/usr\/bin\/g\u002b\u002b g\u002b\u002b \/usr\/bin\/g\u002b\u002b-11 110 # Setting Up a Soft Link for GCC-6.",
+    "abstract": "Compilling PyTorch on Power9 ppc64le #1. Environment Preparation ## Prepare Environment ## Create Python Environment micromamba create -y -n pytorch python=3.12 ## Create Folders mkdir -p ~\/Software\/ppc64le\/magma mkdir -p ~\/Wheels\/ppc64le ## Set qQuad Precision (Float128) export CFLAGS=\u0026#34;-mfloat128\u0026#34; export LDFLAGS=\u0026#34;-lquadmath\u0026#34; 2. Installing Magma ## Magma cd ~\/Wheels\/ppc64le ## Clone Magma (v2.9.0) git clone https:\/\/github.com\/icl-utk-edu\/magma.git cd magma git checkout v2.9.0 ## Config Magma cd magma echo -e \u0026#39;BACKEND = cuda\\nGPU_TARGET = Volta Turing\u0026#39; \u0026gt; make.",
     "inLanguage": "en",
-    "url" : "https:\/\/congyewang.github.io\/posts\/gcc6_compiling\/",
+    "url" : "https:\/\/congyewang.github.io\/posts\/pytorch_ppc64le\/",
     "author" : {
       "@type": "Person",
       "name": "Congye Wang"
     },
-    "copyrightYear": "2024",
-    "dateCreated": "2024-07-31T00:00:00\u002b00:00",
-    "datePublished": "2024-07-31T00:00:00\u002b00:00",
     
-    "dateModified": "2024-07-31T00:00:00\u002b00:00",
+    
+    
+    
+    
     
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "186"
+    "wordCount": "181"
   }
   </script>
     
@@ -158,7 +156,7 @@
      },
      {
        "@type": "ListItem",
-       "name": "Install Gcc 6.3.0 on Ubuntu",
+       "name": "",
        "position": 3
      }
    ]
@@ -439,7 +437,7 @@
     <header class="max-w-prose">
       
       <h1 class="mb-8 mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-        Install GCC 6.3.0 on Ubuntu
+        
       </h1>
       
         <div class="mb-10 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
@@ -475,7 +473,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2024-07-31 00:00:00 &#43;0000 UTC">31 July 2024</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">1 min</span>
+      <time datetime="0001-01-01 00:00:00 &#43;0000 UTC">1 January 0001</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">1 min</span>
     
 
     
@@ -493,57 +491,68 @@
     <section class="prose mt-0 flex max-w-full flex-col dark:prose-invert lg:flex-row">
       
       <div class="min-h-0 min-w-0 max-w-prose grow">
-        <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Create GCC Storage Directory</span>
-</span></span><span style="display:flex;"><span>sudo mkdir /usr/local/gcc
+        <h1 id="compilling-pytorch-on-power9-ppc64le" class="relative group">Compilling PyTorch on Power9 ppc64le <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#compilling-pytorch-on-power9-ppc64le" aria-label="Anchor">#</a></span></h1><h2 id="1-environment-preparation" class="relative group">1. Environment Preparation <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#1-environment-preparation" aria-label="Anchor">#</a></span></h2><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Prepare Environment</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## Create Python Environment</span>
+</span></span><span style="display:flex;"><span>micromamba create -y -n pytorch python<span style="color:#f92672">=</span>3.12
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Download the Source Code of GCC6.3.0</span>
-</span></span><span style="display:flex;"><span>cd ~/Downloads
-</span></span><span style="display:flex;"><span>wget https://ftp.gnu.org/gnu/gcc/gcc-6.3.0/gcc-6.3.0.tar.gz
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## Create Folders</span>
+</span></span><span style="display:flex;"><span>mkdir -p ~/Software/ppc64le/magma
+</span></span><span style="display:flex;"><span>mkdir -p ~/Wheels/ppc64le
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Decompression</span>
-</span></span><span style="display:flex;"><span>tar -zxf gcc-6.3.0.tar.gz
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## Set qQuad Precision (Float128)</span>
+</span></span><span style="display:flex;"><span>export CFLAGS<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;-mfloat128&#34;</span>
+</span></span><span style="display:flex;"><span>export LDFLAGS<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;-lquadmath&#34;</span>
+</span></span></code></pre></div><h2 id="2-installing-magma" class="relative group">2. Installing Magma <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#2-installing-magma" aria-label="Anchor">#</a></span></h2><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Magma</span>
+</span></span><span style="display:flex;"><span>cd ~/Wheels/ppc64le
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Download and Compile Dependencies</span>
-</span></span><span style="display:flex;"><span>./contrib/download_prerequisites
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## Clone Magma (v2.9.0)</span>
+</span></span><span style="display:flex;"><span>git clone https://github.com/icl-utk-edu/magma.git
+</span></span><span style="display:flex;"><span>cd magma
+</span></span><span style="display:flex;"><span>git checkout v2.9.0
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Configuring Compilation Options</span>
-</span></span><span style="display:flex;"><span>./configure --prefix<span style="color:#f92672">=</span>/usr/local/gcc/gcc-6.3.0 --enable-threads<span style="color:#f92672">=</span>posix --disable-checking --disable-multilib --enable-languages<span style="color:#f92672">=</span>c,c++ --disable-libsanitizer
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## Config Magma</span>
+</span></span><span style="display:flex;"><span>cd magma
+</span></span><span style="display:flex;"><span>echo -e <span style="color:#e6db74">&#39;BACKEND = cuda\nGPU_TARGET = Volta Turing&#39;</span> &gt; make.inc
+</span></span><span style="display:flex;"><span>make generate
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Compile the Source Code</span>
-</span></span><span style="display:flex;"><span>make
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## Build &amp; Install Magma</span>
+</span></span><span style="display:flex;"><span>mkdir build <span style="color:#f92672">&amp;&amp;</span> cd build
+</span></span><span style="display:flex;"><span>cmake -DCMAKE_INSTALL_PREFIX<span style="color:#f92672">=</span>~/Software/ppc64le/magma -DGPU_TARGET<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;sm_70;sm_75&#39;</span> ..
+</span></span><span style="display:flex;"><span>make -j16
+</span></span><span style="display:flex;"><span>make install
+</span></span></code></pre></div><h2 id="3-installing-pytorch" class="relative group">3. Installing PyTorch <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#3-installing-pytorch" aria-label="Anchor">#</a></span></h2><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># PyTorch</span>
+</span></span><span style="display:flex;"><span>cd ~/Wheels/ppc64le
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Fix GCC6.3.0 Source Compile Error</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># error: dereferencing pointer to incomplete type ‘struct ucontext’ (GCC8.1 does not have this error).</span>
-</span></span><span style="display:flex;"><span>vim ./x86_64-pc-linux-gnu/libgcc/md-unwind-support.h
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## Clone PyTorch (v2.8.0)</span>
+</span></span><span style="display:flex;"><span>git clone https://github.com/pytorch/pytorch.git
+</span></span><span style="display:flex;"><span>cd pytorch
+</span></span><span style="display:flex;"><span>git checkout v2.8.0
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Skip to Line 61 and Replace with</span>
-</span></span><span style="display:flex;"><span>struct ucontext_t *uc_ <span style="color:#f92672">=</span> context-&gt;cfa;
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## Git Pull SubModule</span>
+</span></span><span style="display:flex;"><span>git submodule sync
+</span></span><span style="display:flex;"><span>git submodule update --init --recursive
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Installing</span>
-</span></span><span style="display:flex;"><span>sudo make install
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## Install CMake and Ninja</span>
+</span></span><span style="display:flex;"><span>micromamba install cmake ninja
+</span></span><span style="display:flex;"><span>pip install -r requirements.txt
+</span></span></code></pre></div><p>Create File .ci/docker/common/install_magma_ppc64le.sh</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#!/usr/bin/env bash
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>set -eou pipefail
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># View system GCC and G++ locations</span>
-</span></span><span style="display:flex;"><span>which gcc
+</span></span><span style="display:flex;"><span>cuda_version_nodot<span style="color:#f92672">=</span><span style="color:#e6db74">${</span>1/./<span style="color:#e6db74">}</span>
+</span></span><span style="display:flex;"><span>anaconda_dir<span style="color:#f92672">=</span><span style="color:#e6db74">${</span>CONDA_PREFIX<span style="color:#66d9ef">:-</span><span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>dirname <span style="color:#66d9ef">$(</span>which micromamba<span style="color:#66d9ef">))</span><span style="color:#e6db74">/../&#34;</span><span style="color:#e6db74">}</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Adding Common Versions to the GCC and G++ Version Managers</span>
-</span></span><span style="display:flex;"><span>sudo update-alternatives  --install /usr/bin/gcc gcc /usr/bin/gcc-11 <span style="color:#ae81ff">110</span>
-</span></span><span style="display:flex;"><span>sudo update-alternatives  --install /usr/bin/g++ g++ /usr/bin/g++-11 <span style="color:#ae81ff">110</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">(</span>
+</span></span><span style="display:flex;"><span>    cp -r /users/congye/Software/ppc64le/magma/include/* <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>anaconda_dir<span style="color:#e6db74">}</span><span style="color:#e6db74">/include/&#34;</span>
+</span></span><span style="display:flex;"><span>    cp -r /users/congye/Software/ppc64le/magma/lib/* <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>anaconda_dir<span style="color:#e6db74">}</span><span style="color:#e6db74">/lib&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">)</span>
+</span></span></code></pre></div><p>Continue running the command</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">## Install Magma to Virtual Environment</span>
+</span></span><span style="display:flex;"><span>.ci/docker/common/install_magma_ppc64le.sh 12.4
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Setting Up a Soft Link for GCC-6.3.0</span>
-</span></span><span style="display:flex;"><span>sudo ln -s /usr/local/gcc/gcc-6.3.0/bin/gcc /usr/bin/gcc-6
-</span></span><span style="display:flex;"><span>sudo ln -s /usr/local/gcc/gcc-6.3.0/bin/g++ /usr/bin/g++-6
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Add GCC-6.3.0 to Version Manager</span>
-</span></span><span style="display:flex;"><span>sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-6 <span style="color:#ae81ff">60</span>
-</span></span><span style="display:flex;"><span>sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-6 <span style="color:#ae81ff">60</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Switch the Current GCC Version</span>
-</span></span><span style="display:flex;"><span>sudo update-alternatives --config gcc
-</span></span><span style="display:flex;"><span>sudo update-alternatives --config g++
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Check the GCC Version of the System</span>
-</span></span><span style="display:flex;"><span>gcc --version
-</span></span><span style="display:flex;"><span>g++ --version
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## Install PyTorch</span>
+</span></span><span style="display:flex;"><span>export CMAKE_PREFIX_PATH<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>CONDA_PREFIX<span style="color:#66d9ef">:-</span><span style="color:#e6db74">&#39;$(dirname $(which micromamba))/../&#39;</span><span style="color:#e6db74">}</span><span style="color:#e6db74">:</span><span style="color:#e6db74">${</span>CMAKE_PREFIX_PATH<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>python setup.py develop
 </span></span></code></pre></div>
       </div>
     </section>
@@ -681,27 +690,27 @@
       <div class="flex justify-between pt-3">
         <span>
           
-            <a class="group flex" href="/posts/pytorch_ppc64le/">
-              <span
-                class="me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
-                ><span class="ltr:inline rtl:hidden">&larr;</span
-                ><span class="ltr:hidden rtl:inline">&rarr;</span></span
-              >
+        </span>
+        <span>
+          
+            <a class="group flex text-right" href="/posts/gcc6_compiling/">
               <span class="flex flex-col">
                 <span
                   class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  ></span
+                  >Install GCC 6.3.0 on Ubuntu</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="0001-01-01 00:00:00 &#43;0000 UTC">1 January 0001</time>
+                    <time datetime="2024-07-31 00:00:00 &#43;0000 UTC">31 July 2024</time>
                   
                 </span>
               </span>
+              <span
+                class="ms-2 text-neutral-700 transition-transform group-hover:-translate-x-[-2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&rarr;</span
+                ><span class="ltr:hidden rtl:inline">&larr;</span></span
+              >
             </a>
-          
-        </span>
-        <span>
           
         </span>
       </div>

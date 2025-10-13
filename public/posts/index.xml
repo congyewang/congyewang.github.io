@@ -15,5 +15,12 @@
       <guid>https://congyewang.github.io/posts/gcc6_compiling/</guid>
       <description># Create GCC Storage Directory sudo mkdir /usr/local/gcc # Download the Source Code of GCC6.3.0 cd ~/Downloads wget https://ftp.gnu.org/gnu/gcc/gcc-6.3.0/gcc-6.3.0.tar.gz # Decompression tar -zxf gcc-6.3.0.tar.gz # Download and Compile Dependencies ./contrib/download_prerequisites # Configuring Compilation Options ./configure --prefix=/usr/local/gcc/gcc-6.3.0 --enable-threads=posix --disable-checking --disable-multilib --enable-languages=c,c++ --disable-libsanitizer # Compile the Source Code make # Fix GCC6.3.0 Source Compile Error # error: dereferencing pointer to incomplete type ‘struct ucontext’ (GCC8.1 does not have this error). vim ./x86_64-pc-linux-gnu/libgcc/md-unwind-support.h # Skip to Line 61 and Replace with struct ucontext_t *uc_ = context-&amp;gt;cfa; # Installing sudo make install # View system GCC and G++ locations which gcc # Adding Common Versions to the GCC and G++ Version Managers sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-11 110 sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-11 110 # Setting Up a Soft Link for GCC-6.</description>
     </item>
+    <item>
+      <title></title>
+      <link>https://congyewang.github.io/posts/pytorch_ppc64le/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://congyewang.github.io/posts/pytorch_ppc64le/</guid>
+      <description>Compilling PyTorch on Power9 ppc64le #1. Environment Preparation ## Prepare Environment ## Create Python Environment micromamba create -y -n pytorch python=3.12 ## Create Folders mkdir -p ~/Software/ppc64le/magma mkdir -p ~/Wheels/ppc64le ## Set qQuad Precision (Float128) export CFLAGS=&amp;#34;-mfloat128&amp;#34; export LDFLAGS=&amp;#34;-lquadmath&amp;#34; 2. Installing Magma ## Magma cd ~/Wheels/ppc64le ## Clone Magma (v2.9.0) git clone https://github.com/icl-utk-edu/magma.git cd magma git checkout v2.9.0 ## Config Magma cd magma echo -e &amp;#39;BACKEND = cuda\nGPU_TARGET = Volta Turing&amp;#39; &amp;gt; make.</description>
+    </item>
   </channel>
 </rss>
