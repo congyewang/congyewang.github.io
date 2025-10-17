@@ -17,8 +17,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#FFFFFF" />
   
-  <title> &middot; Congye Wang</title>
-    <meta name="title" content=" &middot; Congye Wang" />
+  <title>Compilling PyTorch on Power9 ppc64le &middot; Congye Wang</title>
+    <meta name="title" content="Compilling PyTorch on Power9 ppc64le &middot; Congye Wang" />
   
   
   
@@ -26,7 +26,7 @@
   
   <script
     type="text/javascript"
-    src="/js/appearance.min.8a082f81b27f3cb2ee528df0b0bdc39787034cf2cc34d4669fbc9977c929023c.js"
+    src="https://congyewang.github.io/js/appearance.min.8a082f81b27f3cb2ee528df0b0bdc39787034cf2cc34d4669fbc9977c929023c.js"
     integrity="sha256-iggvgbJ/PLLuUo3wsL3Dl4cDTPLMNNRmn7yZd8kpAjw="
   ></script>
   
@@ -40,8 +40,8 @@
   <link
     type="text/css"
     rel="stylesheet"
-    href="/css/main.bundle.min.8f25b3b1fdd42cfaf2092d7e98b41f6474cfaf471f6aeb265f7ba2579197e54e.css"
-    integrity="sha256-jyWzsf3ULPryCS1&#43;mLQfZHTPr0cfausmX3uiV5GX5U4="
+    href="https://congyewang.github.io/css/main.bundle.min.a645f3fa02b2ca20e7ef61b236048d95cc9bc2e5b2faf1f0ac0aa85431187c1c.css"
+    integrity="sha256-pkXz&#43;gKyyiDn72GyNgSNlcybwuWy&#43;vHwrAqoVDEYfBw="
   />
   
   
@@ -60,7 +60,7 @@
       defer
       type="text/javascript"
       id="script-bundle"
-      src="/js/main.bundle.min.eb18dcb25558ad5dcbc8a080261d2f3b2957309098f6f19a294cefb78492bfc7.js"
+      src="https://congyewang.github.io/js/main.bundle.min.eb18dcb25558ad5dcbc8a080261d2f3b2957309098f6f19a294cefb78492bfc7.js"
       integrity="sha256-6xjcslVYrV3LyKCAJh0vOylXMJCY9vGaKUzvt4SSv8c="
       data-copy="Copy"
       data-copied="Copied"
@@ -71,14 +71,60 @@
     name="description"
     content="
       
-        Compilling PyTorch on Power9 ppc64le #1. Environment Preparation ## Prepare Environment ## Create Python Environment micromamba create -y -n pytorch python=3.12 ## Create Folders mkdir -p ~/Software/ppc64le/magma mkdir -p ~/Wheels/ppc64le ## Set qQuad Precision (Float128) export CFLAGS=&#34;-mfloat128&#34; export LDFLAGS=&#34;-lquadmath&#34; 2. Installing Magma ## Magma cd ~/Wheels/ppc64le ## Clone Magma (v2.9.0) git clone https://github.com/icl-utk-edu/magma.git cd magma git checkout v2.9.0 ## Config Magma cd magma echo -e &#39;BACKEND = cuda\nGPU_TARGET = Volta Turing&#39; &gt; make.
+        1. Environment Preparation ## Prepare Environment
+## Create Python Environment
+micromamba create -y -n pytorch python=3.12
+
+## Create Folders
+mkdir -p ~/Software/ppc64le/magma
+mkdir -p ~/Wheels/ppc64le
+
+## Set qQuad Precision (Float128)
+export CFLAGS=&#34;-mfloat128&#34;
+export LDFLAGS=&#34;-lquadmath&#34;
+2. Installing Magma ## Magma
+cd ~/Wheels/ppc64le
+
+## Clone Magma (v2.9.0)
+git clone https://github.com/icl-utk-edu/magma.git
+cd magma
+git checkout v2.9.0
+
+## Config Magma
+cd magma
+echo -e &#39;BACKEND = cuda\nGPU_TARGET = Volta Turing&#39; &gt; make.inc
+make generate
+
+## Build &amp; Install Magma
+mkdir build &amp;&amp; cd build
+cmake -DCMAKE_INSTALL_PREFIX=~/Software/ppc64le/magma -DGPU_TARGET=&#39;sm_70;sm_75&#39; ..
+make -j16
+make install
+3. Installing PyTorch ## PyTorch
+cd ~/Wheels/ppc64le
+
+## Clone PyTorch (v2.8.0)
+git clone https://github.com/pytorch/pytorch.git
+cd pytorch
+git checkout v2.8.0
+
+## Git Pull SubModule
+git submodule sync
+git submodule update --init --recursive
+
+## Install CMake and Ninja
+micromamba install cmake ninja
+pip install -r requirements.txt
+Create File .ci/docker/common/install_magma_ppc64le.sh
       
     "
   />
   
   
   
-  <link rel="canonical" href="https://congyewang.github.io/posts/pytorch_ppc64le/" />
+  
+    <link rel="canonical" href="https://congyewang.github.io/posts/pytorch_ppc64le/" />
+  
   
   
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -97,16 +143,18 @@
   
   <meta property="og:url" content="https://congyewang.github.io/posts/pytorch_ppc64le/">
   <meta property="og:site_name" content="Congye Wang">
-  <meta property="og:title" content="Congye Wang">
-  <meta property="og:description" content="Compilling PyTorch on Power9 ppc64le #1. Environment Preparation ## Prepare Environment ## Create Python Environment micromamba create -y -n pytorch python=3.12 ## Create Folders mkdir -p ~/Software/ppc64le/magma mkdir -p ~/Wheels/ppc64le ## Set qQuad Precision (Float128) export CFLAGS=&#34;-mfloat128&#34; export LDFLAGS=&#34;-lquadmath&#34; 2. Installing Magma ## Magma cd ~/Wheels/ppc64le ## Clone Magma (v2.9.0) git clone https://github.com/icl-utk-edu/magma.git cd magma git checkout v2.9.0 ## Config Magma cd magma echo -e &#39;BACKEND = cuda\nGPU_TARGET = Volta Turing&#39; &gt; make.">
+  <meta property="og:title" content="Compilling PyTorch on Power9 ppc64le">
+  <meta property="og:description" content="1. Environment Preparation ## Prepare Environment ## Create Python Environment micromamba create -y -n pytorch python=3.12 ## Create Folders mkdir -p ~/Software/ppc64le/magma mkdir -p ~/Wheels/ppc64le ## Set qQuad Precision (Float128) export CFLAGS=&#34;-mfloat128&#34; export LDFLAGS=&#34;-lquadmath&#34; 2. Installing Magma ## Magma cd ~/Wheels/ppc64le ## Clone Magma (v2.9.0) git clone https://github.com/icl-utk-edu/magma.git cd magma git checkout v2.9.0 ## Config Magma cd magma echo -e &#39;BACKEND = cuda\nGPU_TARGET = Volta Turing&#39; &gt; make.inc make generate ## Build &amp; Install Magma mkdir build &amp;&amp; cd build cmake -DCMAKE_INSTALL_PREFIX=~/Software/ppc64le/magma -DGPU_TARGET=&#39;sm_70;sm_75&#39; .. make -j16 make install 3. Installing PyTorch ## PyTorch cd ~/Wheels/ppc64le ## Clone PyTorch (v2.8.0) git clone https://github.com/pytorch/pytorch.git cd pytorch git checkout v2.8.0 ## Git Pull SubModule git submodule sync git submodule update --init --recursive ## Install CMake and Ninja micromamba install cmake ninja pip install -r requirements.txt Create File .ci/docker/common/install_magma_ppc64le.sh">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-10-14T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-10-14T00:00:00+00:00">
 
   
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Congye Wang">
-  <meta name="twitter:description" content="Compilling PyTorch on Power9 ppc64le #1. Environment Preparation ## Prepare Environment ## Create Python Environment micromamba create -y -n pytorch python=3.12 ## Create Folders mkdir -p ~/Software/ppc64le/magma mkdir -p ~/Wheels/ppc64le ## Set qQuad Precision (Float128) export CFLAGS=&#34;-mfloat128&#34; export LDFLAGS=&#34;-lquadmath&#34; 2. Installing Magma ## Magma cd ~/Wheels/ppc64le ## Clone Magma (v2.9.0) git clone https://github.com/icl-utk-edu/magma.git cd magma git checkout v2.9.0 ## Config Magma cd magma echo -e &#39;BACKEND = cuda\nGPU_TARGET = Volta Turing&#39; &gt; make.">
+  <meta name="twitter:title" content="Compilling PyTorch on Power9 ppc64le">
+  <meta name="twitter:description" content="1. Environment Preparation ## Prepare Environment ## Create Python Environment micromamba create -y -n pytorch python=3.12 ## Create Folders mkdir -p ~/Software/ppc64le/magma mkdir -p ~/Wheels/ppc64le ## Set qQuad Precision (Float128) export CFLAGS=&#34;-mfloat128&#34; export LDFLAGS=&#34;-lquadmath&#34; 2. Installing Magma ## Magma cd ~/Wheels/ppc64le ## Clone Magma (v2.9.0) git clone https://github.com/icl-utk-edu/magma.git cd magma git checkout v2.9.0 ## Config Magma cd magma echo -e &#39;BACKEND = cuda\nGPU_TARGET = Volta Turing&#39; &gt; make.inc make generate ## Build &amp; Install Magma mkdir build &amp;&amp; cd build cmake -DCMAKE_INSTALL_PREFIX=~/Software/ppc64le/magma -DGPU_TARGET=&#39;sm_70;sm_75&#39; .. make -j16 make install 3. Installing PyTorch ## PyTorch cd ~/Wheels/ppc64le ## Clone PyTorch (v2.8.0) git clone https://github.com/pytorch/pytorch.git cd pytorch git checkout v2.8.0 ## Git Pull SubModule git submodule sync git submodule update --init --recursive ## Install CMake and Ninja micromamba install cmake ninja pip install -r requirements.txt Create File .ci/docker/common/install_magma_ppc64le.sh">
 
   
   <script type="application/ld+json">
@@ -114,26 +162,26 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Posts",
-    "name": "",
-    "headline": "",
+    "name": "Compilling PyTorch on Power9 ppc64le",
+    "headline": "Compilling PyTorch on Power9 ppc64le",
     
-    "abstract": "Compilling PyTorch on Power9 ppc64le #1. Environment Preparation ## Prepare Environment ## Create Python Environment micromamba create -y -n pytorch python=3.12 ## Create Folders mkdir -p ~\/Software\/ppc64le\/magma mkdir -p ~\/Wheels\/ppc64le ## Set qQuad Precision (Float128) export CFLAGS=\u0026#34;-mfloat128\u0026#34; export LDFLAGS=\u0026#34;-lquadmath\u0026#34; 2. Installing Magma ## Magma cd ~\/Wheels\/ppc64le ## Clone Magma (v2.9.0) git clone https:\/\/github.com\/icl-utk-edu\/magma.git cd magma git checkout v2.9.0 ## Config Magma cd magma echo -e \u0026#39;BACKEND = cuda\\nGPU_TARGET = Volta Turing\u0026#39; \u0026gt; make.",
+    "abstract": "\u003ch2 id=\u00221-environment-preparation\u0022 class=\u0022relative group\u0022\u003e1. Environment Preparation \u003cspan class=\u0022absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100\u0022\u003e\u003ca class=\u0022group-hover:text-primary-300 dark:group-hover:text-neutral-700\u0022 style=\u0022text-decoration-line: none !important;\u0022 href=\u0022#1-environment-preparation\u0022 aria-label=\u0022Anchor\u0022\u003e#\u003c\/a\u003e\u003c\/span\u003e\u003c\/h2\u003e\u003cdiv class=\u0022highlight\u0022\u003e\u003cpre tabindex=\u00220\u0022 style=\u0022color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;\u0022\u003e\u003ccode class=\u0022language-bash\u0022 data-lang=\u0022bash\u0022\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e# Prepare Environment\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e## Create Python Environment\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003emicromamba create -y -n pytorch python\u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003e3.12\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e## Create Folders\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003emkdir -p ~\/Software\/ppc64le\/magma\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003emkdir -p ~\/Wheels\/ppc64le\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e## Set qQuad Precision (Float128)\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003eexport CFLAGS\u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003e\u003cspan style=\u0022color:#e6db74\u0022\u003e\u0026#34;-mfloat128\u0026#34;\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003eexport LDFLAGS\u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003e\u003cspan style=\u0022color:#e6db74\u0022\u003e\u0026#34;-lquadmath\u0026#34;\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003c\/code\u003e\u003c\/pre\u003e\u003c\/div\u003e\u003ch2 id=\u00222-installing-magma\u0022 class=\u0022relative group\u0022\u003e2. Installing Magma \u003cspan class=\u0022absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100\u0022\u003e\u003ca class=\u0022group-hover:text-primary-300 dark:group-hover:text-neutral-700\u0022 style=\u0022text-decoration-line: none !important;\u0022 href=\u0022#2-installing-magma\u0022 aria-label=\u0022Anchor\u0022\u003e#\u003c\/a\u003e\u003c\/span\u003e\u003c\/h2\u003e\u003cdiv class=\u0022highlight\u0022\u003e\u003cpre tabindex=\u00220\u0022 style=\u0022color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;\u0022\u003e\u003ccode class=\u0022language-bash\u0022 data-lang=\u0022bash\u0022\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e# Magma\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003ecd ~\/Wheels\/ppc64le\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e## Clone Magma (v2.9.0)\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003egit clone https:\/\/github.com\/icl-utk-edu\/magma.git\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003ecd magma\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003egit checkout v2.9.0\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e## Config Magma\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003ecd magma\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003eecho -e \u003cspan style=\u0022color:#e6db74\u0022\u003e\u0026#39;BACKEND = cuda\\nGPU_TARGET = Volta Turing\u0026#39;\u003c\/span\u003e \u0026gt; make.inc\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003emake generate\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e## Build \u0026amp; Install Magma\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003emkdir build \u003cspan style=\u0022color:#f92672\u0022\u003e\u0026amp;\u0026amp;\u003c\/span\u003e cd build\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003ecmake -DCMAKE_INSTALL_PREFIX\u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003e~\/Software\/ppc64le\/magma -DGPU_TARGET\u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003e\u003cspan style=\u0022color:#e6db74\u0022\u003e\u0026#39;sm_70;sm_75\u0026#39;\u003c\/span\u003e ..\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003emake -j16\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003emake install\n\u003c\/span\u003e\u003c\/span\u003e\u003c\/code\u003e\u003c\/pre\u003e\u003c\/div\u003e\u003ch2 id=\u00223-installing-pytorch\u0022 class=\u0022relative group\u0022\u003e3. Installing PyTorch \u003cspan class=\u0022absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100\u0022\u003e\u003ca class=\u0022group-hover:text-primary-300 dark:group-hover:text-neutral-700\u0022 style=\u0022text-decoration-line: none !important;\u0022 href=\u0022#3-installing-pytorch\u0022 aria-label=\u0022Anchor\u0022\u003e#\u003c\/a\u003e\u003c\/span\u003e\u003c\/h2\u003e\u003cdiv class=\u0022highlight\u0022\u003e\u003cpre tabindex=\u00220\u0022 style=\u0022color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;\u0022\u003e\u003ccode class=\u0022language-bash\u0022 data-lang=\u0022bash\u0022\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e# PyTorch\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003ecd ~\/Wheels\/ppc64le\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e## Clone PyTorch (v2.8.0)\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003egit clone https:\/\/github.com\/pytorch\/pytorch.git\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003ecd pytorch\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003egit checkout v2.8.0\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e## Git Pull SubModule\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003egit submodule sync\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003egit submodule update --init --recursive\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e## Install CMake and Ninja\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003emicromamba install cmake ninja\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003epip install -r requirements.txt\n\u003c\/span\u003e\u003c\/span\u003e\u003c\/code\u003e\u003c\/pre\u003e\u003c\/div\u003e\u003cp\u003eCreate File .ci\/docker\/common\/install_magma_ppc64le.sh\u003c\/p\u003e",
     "inLanguage": "en",
     "url" : "https:\/\/congyewang.github.io\/posts\/pytorch_ppc64le\/",
     "author" : {
       "@type": "Person",
       "name": "Congye Wang"
     },
+    "copyrightYear": "2025",
+    "dateCreated": "2025-10-14T00:00:00\u002b00:00",
+    "datePublished": "2025-10-14T00:00:00\u002b00:00",
     
-    
-    
-    
-    
+    "dateModified": "2025-10-14T00:00:00\u002b00:00",
     
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "181"
+    "wordCount": "176"
   }
   </script>
     
@@ -156,7 +204,7 @@
      },
      {
        "@type": "ListItem",
-       "name": "",
+       "name": "Compilling Py Torch on Power9 Ppc64le",
        "position": 3
      }
    ]
@@ -164,7 +212,9 @@
   </script>
 
   
-  <meta name="author" content="Congye Wang" />
+  
+    <meta name="author" content="Congye Wang" />
+  
   
     
       <link href="https://github.com/congyewang" rel="me" />
@@ -184,15 +234,13 @@
 
 
 
-  
-  
-  
-  
-  
-  
-  
 
-
+  
+  
+  
+  
+  
+  
 
 
   
@@ -252,7 +300,7 @@
                   
                     <a
                       href="/posts/"
-                      title=""
+                      title="Posts"
                       onclick="close_menu()"
                       
                       ><span
@@ -269,7 +317,7 @@
                   
                     <a
                       href="/professional/"
-                      title=""
+                      title="Professional"
                       onclick="close_menu()"
                       
                       ><span
@@ -286,7 +334,7 @@
                   
                     <a
                       href="/papers/"
-                      title=""
+                      title="Papers"
                       onclick="close_menu()"
                       
                       ><span
@@ -303,7 +351,7 @@
                   
                     <a
                       href="/presentations/"
-                      title=""
+                      title="Presentations"
                       onclick="close_menu()"
                       
                       ><span
@@ -320,7 +368,7 @@
                   
                     <a
                       href="/contact/"
-                      title=""
+                      title="Contact"
                       onclick="close_menu()"
                       
                       ><span
@@ -346,7 +394,7 @@
               
                 <a
                   href="/posts/"
-                  title=""
+                  title="Posts"
                   
                   ><span
                       class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
@@ -362,7 +410,7 @@
               
                 <a
                   href="/professional/"
-                  title=""
+                  title="Professional"
                   
                   ><span
                       class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
@@ -378,7 +426,7 @@
               
                 <a
                   href="/papers/"
-                  title=""
+                  title="Papers"
                   
                   ><span
                       class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
@@ -394,7 +442,7 @@
               
                 <a
                   href="/presentations/"
-                  title=""
+                  title="Presentations"
                   
                   ><span
                       class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
@@ -410,7 +458,7 @@
               
                 <a
                   href="/contact/"
-                  title=""
+                  title="Contact"
                   
                   ><span
                       class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
@@ -437,7 +485,7 @@
     <header class="max-w-prose">
       
       <h1 class="mb-8 mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-        
+        Compilling PyTorch on Power9 ppc64le
       </h1>
       
         <div class="mb-10 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
@@ -473,7 +521,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="0001-01-01 00:00:00 &#43;0000 UTC">1 January 0001</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">1 min</span>
+      <time datetime="2025-10-14 00:00:00 &#43;0000 UTC">14 October 2025</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">1 min</span>
     
 
     
@@ -491,7 +539,7 @@
     <section class="prose mt-0 flex max-w-full flex-col dark:prose-invert lg:flex-row">
       
       <div class="min-h-0 min-w-0 max-w-prose grow">
-        <h1 id="compilling-pytorch-on-power9-ppc64le" class="relative group">Compilling PyTorch on Power9 ppc64le <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#compilling-pytorch-on-power9-ppc64le" aria-label="Anchor">#</a></span></h1><h2 id="1-environment-preparation" class="relative group">1. Environment Preparation <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#1-environment-preparation" aria-label="Anchor">#</a></span></h2><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Prepare Environment</span>
+        <h2 id="1-environment-preparation" class="relative group">1. Environment Preparation <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#1-environment-preparation" aria-label="Anchor">#</a></span></h2><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Prepare Environment</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">## Create Python Environment</span>
 </span></span><span style="display:flex;"><span>micromamba create -y -n pytorch python<span style="color:#f92672">=</span>3.12
 </span></span><span style="display:flex;"><span>
@@ -590,13 +638,12 @@
         alt="Congye Wang"
         loading="lazy" decoding="async"
         
-          src="/img/author_hud719889e0f7acb40796cd39703a5df9c_1140876_660x0_resize_q75_box.jpg"
-          srcset="/img/author_hud719889e0f7acb40796cd39703a5df9c_1140876_330x0_resize_q75_box.jpg 330w,/img/author_hud719889e0f7acb40796cd39703a5df9c_1140876_660x0_resize_q75_box.jpg 660w
+          src="https://congyewang.github.io/img/author_hu_45a68a0aeb2cface.jpg" srcset="https://congyewang.github.io/img/author_hu_afd1c014e8a297dc.jpg 330w,https://congyewang.github.io/img/author_hu_45a68a0aeb2cface.jpg 660w
           
-            ,/img/author_hud719889e0f7acb40796cd39703a5df9c_1140876_1024x0_resize_q75_box.jpg 1024w
+            ,https://congyewang.github.io/img/author_hu_724ec85f21db392a.jpg 1024w
           
           
-            ,/img/author_hud719889e0f7acb40796cd39703a5df9c_1140876_1320x0_resize_q75_box.jpg 1320w
+            ,https://congyewang.github.io/img/author_hu_83c475eea617dd35.jpg 1320w
           "
           sizes="100vw"
         
@@ -690,10 +737,12 @@
       <div class="flex justify-between pt-3">
         <span>
           
-        </span>
-        <span>
-          
-            <a class="group flex text-right" href="/posts/gcc6_compiling/">
+            <a class="group flex" href="https://congyewang.github.io/posts/gcc6_compiling/">
+              <span
+                class="me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&larr;</span
+                ><span class="ltr:hidden rtl:inline">&rarr;</span></span
+              >
               <span class="flex flex-col">
                 <span
                   class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
@@ -705,12 +754,10 @@
                   
                 </span>
               </span>
-              <span
-                class="ms-2 text-neutral-700 transition-transform group-hover:-translate-x-[-2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
-                ><span class="ltr:inline rtl:hidden">&rarr;</span
-                ><span class="ltr:hidden rtl:inline">&larr;</span></span
-              >
             </a>
+          
+        </span>
+        <span>
           
         </span>
       </div>

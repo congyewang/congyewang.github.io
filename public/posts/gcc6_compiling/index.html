@@ -26,7 +26,7 @@
   
   <script
     type="text/javascript"
-    src="/js/appearance.min.8a082f81b27f3cb2ee528df0b0bdc39787034cf2cc34d4669fbc9977c929023c.js"
+    src="https://congyewang.github.io/js/appearance.min.8a082f81b27f3cb2ee528df0b0bdc39787034cf2cc34d4669fbc9977c929023c.js"
     integrity="sha256-iggvgbJ/PLLuUo3wsL3Dl4cDTPLMNNRmn7yZd8kpAjw="
   ></script>
   
@@ -40,8 +40,8 @@
   <link
     type="text/css"
     rel="stylesheet"
-    href="/css/main.bundle.min.8f25b3b1fdd42cfaf2092d7e98b41f6474cfaf471f6aeb265f7ba2579197e54e.css"
-    integrity="sha256-jyWzsf3ULPryCS1&#43;mLQfZHTPr0cfausmX3uiV5GX5U4="
+    href="https://congyewang.github.io/css/main.bundle.min.a645f3fa02b2ca20e7ef61b236048d95cc9bc2e5b2faf1f0ac0aa85431187c1c.css"
+    integrity="sha256-pkXz&#43;gKyyiDn72GyNgSNlcybwuWy&#43;vHwrAqoVDEYfBw="
   />
   
   
@@ -60,7 +60,7 @@
       defer
       type="text/javascript"
       id="script-bundle"
-      src="/js/main.bundle.min.eb18dcb25558ad5dcbc8a080261d2f3b2957309098f6f19a294cefb78492bfc7.js"
+      src="https://congyewang.github.io/js/main.bundle.min.eb18dcb25558ad5dcbc8a080261d2f3b2957309098f6f19a294cefb78492bfc7.js"
       integrity="sha256-6xjcslVYrV3LyKCAJh0vOylXMJCY9vGaKUzvt4SSv8c="
       data-copy="Copy"
       data-copied="Copied"
@@ -71,14 +71,67 @@
     name="description"
     content="
       
-        # Create GCC Storage Directory sudo mkdir /usr/local/gcc # Download the Source Code of GCC6.3.0 cd ~/Downloads wget https://ftp.gnu.org/gnu/gcc/gcc-6.3.0/gcc-6.3.0.tar.gz # Decompression tar -zxf gcc-6.3.0.tar.gz # Download and Compile Dependencies ./contrib/download_prerequisites # Configuring Compilation Options ./configure --prefix=/usr/local/gcc/gcc-6.3.0 --enable-threads=posix --disable-checking --disable-multilib --enable-languages=c,c&#43;&#43; --disable-libsanitizer # Compile the Source Code make # Fix GCC6.3.0 Source Compile Error # error: dereferencing pointer to incomplete type ‘struct ucontext’ (GCC8.1 does not have this error). vim ./x86_64-pc-linux-gnu/libgcc/md-unwind-support.h # Skip to Line 61 and Replace with struct ucontext_t *uc_ = context-&gt;cfa; # Installing sudo make install # View system GCC and G&#43;&#43; locations which gcc # Adding Common Versions to the GCC and G&#43;&#43; Version Managers sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-11 110 sudo update-alternatives --install /usr/bin/g&#43;&#43; g&#43;&#43; /usr/bin/g&#43;&#43;-11 110 # Setting Up a Soft Link for GCC-6.
+        # Create GCC Storage Directory
+sudo mkdir /usr/local/gcc
+
+# Download the Source Code of GCC6.3.0
+cd ~/Downloads
+wget https://ftp.gnu.org/gnu/gcc/gcc-6.3.0/gcc-6.3.0.tar.gz
+
+# Decompression
+tar -zxf gcc-6.3.0.tar.gz
+
+# Download and Compile Dependencies
+./contrib/download_prerequisites
+
+# Configuring Compilation Options
+./configure --prefix=/usr/local/gcc/gcc-6.3.0 --enable-threads=posix --disable-checking --disable-multilib --enable-languages=c,c&#43;&#43; --disable-libsanitizer
+
+# Compile the Source Code
+make
+
+# Fix GCC6.3.0 Source Compile Error
+# error: dereferencing pointer to incomplete type ‘struct ucontext’ (GCC8.1 does not have this error).
+vim ./x86_64-pc-linux-gnu/libgcc/md-unwind-support.h
+
+# Skip to Line 61 and Replace with
+struct ucontext_t *uc_ = context-&gt;cfa;
+
+# Installing
+sudo make install
+
+# View system GCC and G&#43;&#43; locations
+which gcc
+
+# Adding Common Versions to the GCC and G&#43;&#43; Version Managers
+sudo update-alternatives  --install /usr/bin/gcc gcc /usr/bin/gcc-11 110
+sudo update-alternatives  --install /usr/bin/g&#43;&#43; g&#43;&#43; /usr/bin/g&#43;&#43;-11 110
+
+# Setting Up a Soft Link for GCC-6.3.0
+sudo ln -s /usr/local/gcc/gcc-6.3.0/bin/gcc /usr/bin/gcc-6
+sudo ln -s /usr/local/gcc/gcc-6.3.0/bin/g&#43;&#43; /usr/bin/g&#43;&#43;-6
+
+# Add GCC-6.3.0 to Version Manager
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-6 60
+sudo update-alternatives --install /usr/bin/g&#43;&#43; g&#43;&#43; /usr/bin/g&#43;&#43;-6 60
+
+# Switch the Current GCC Version
+sudo update-alternatives --config gcc
+sudo update-alternatives --config g&#43;&#43;
+
+# Check the GCC Version of the System
+gcc --version
+g&#43;&#43; --version
+
       
     "
   />
   
   
   
-  <link rel="canonical" href="https://congyewang.github.io/posts/gcc6_compiling/" />
+  
+    <link rel="canonical" href="https://congyewang.github.io/posts/gcc6_compiling/" />
+  
   
   
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -98,7 +151,7 @@
   <meta property="og:url" content="https://congyewang.github.io/posts/gcc6_compiling/">
   <meta property="og:site_name" content="Congye Wang">
   <meta property="og:title" content="Install GCC 6.3.0 on Ubuntu">
-  <meta property="og:description" content="# Create GCC Storage Directory sudo mkdir /usr/local/gcc # Download the Source Code of GCC6.3.0 cd ~/Downloads wget https://ftp.gnu.org/gnu/gcc/gcc-6.3.0/gcc-6.3.0.tar.gz # Decompression tar -zxf gcc-6.3.0.tar.gz # Download and Compile Dependencies ./contrib/download_prerequisites # Configuring Compilation Options ./configure --prefix=/usr/local/gcc/gcc-6.3.0 --enable-threads=posix --disable-checking --disable-multilib --enable-languages=c,c&#43;&#43; --disable-libsanitizer # Compile the Source Code make # Fix GCC6.3.0 Source Compile Error # error: dereferencing pointer to incomplete type ‘struct ucontext’ (GCC8.1 does not have this error). vim ./x86_64-pc-linux-gnu/libgcc/md-unwind-support.h # Skip to Line 61 and Replace with struct ucontext_t *uc_ = context-&gt;cfa; # Installing sudo make install # View system GCC and G&#43;&#43; locations which gcc # Adding Common Versions to the GCC and G&#43;&#43; Version Managers sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-11 110 sudo update-alternatives --install /usr/bin/g&#43;&#43; g&#43;&#43; /usr/bin/g&#43;&#43;-11 110 # Setting Up a Soft Link for GCC-6.">
+  <meta property="og:description" content="# Create GCC Storage Directory sudo mkdir /usr/local/gcc # Download the Source Code of GCC6.3.0 cd ~/Downloads wget https://ftp.gnu.org/gnu/gcc/gcc-6.3.0/gcc-6.3.0.tar.gz # Decompression tar -zxf gcc-6.3.0.tar.gz # Download and Compile Dependencies ./contrib/download_prerequisites # Configuring Compilation Options ./configure --prefix=/usr/local/gcc/gcc-6.3.0 --enable-threads=posix --disable-checking --disable-multilib --enable-languages=c,c&#43;&#43; --disable-libsanitizer # Compile the Source Code make # Fix GCC6.3.0 Source Compile Error # error: dereferencing pointer to incomplete type ‘struct ucontext’ (GCC8.1 does not have this error). vim ./x86_64-pc-linux-gnu/libgcc/md-unwind-support.h # Skip to Line 61 and Replace with struct ucontext_t *uc_ = context-&gt;cfa; # Installing sudo make install # View system GCC and G&#43;&#43; locations which gcc # Adding Common Versions to the GCC and G&#43;&#43; Version Managers sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-11 110 sudo update-alternatives --install /usr/bin/g&#43;&#43; g&#43;&#43; /usr/bin/g&#43;&#43;-11 110 # Setting Up a Soft Link for GCC-6.3.0 sudo ln -s /usr/local/gcc/gcc-6.3.0/bin/gcc /usr/bin/gcc-6 sudo ln -s /usr/local/gcc/gcc-6.3.0/bin/g&#43;&#43; /usr/bin/g&#43;&#43;-6 # Add GCC-6.3.0 to Version Manager sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-6 60 sudo update-alternatives --install /usr/bin/g&#43;&#43; g&#43;&#43; /usr/bin/g&#43;&#43;-6 60 # Switch the Current GCC Version sudo update-alternatives --config gcc sudo update-alternatives --config g&#43;&#43; # Check the GCC Version of the System gcc --version g&#43;&#43; --version">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -108,7 +161,7 @@
   
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Install GCC 6.3.0 on Ubuntu">
-  <meta name="twitter:description" content="# Create GCC Storage Directory sudo mkdir /usr/local/gcc # Download the Source Code of GCC6.3.0 cd ~/Downloads wget https://ftp.gnu.org/gnu/gcc/gcc-6.3.0/gcc-6.3.0.tar.gz # Decompression tar -zxf gcc-6.3.0.tar.gz # Download and Compile Dependencies ./contrib/download_prerequisites # Configuring Compilation Options ./configure --prefix=/usr/local/gcc/gcc-6.3.0 --enable-threads=posix --disable-checking --disable-multilib --enable-languages=c,c&#43;&#43; --disable-libsanitizer # Compile the Source Code make # Fix GCC6.3.0 Source Compile Error # error: dereferencing pointer to incomplete type ‘struct ucontext’ (GCC8.1 does not have this error). vim ./x86_64-pc-linux-gnu/libgcc/md-unwind-support.h # Skip to Line 61 and Replace with struct ucontext_t *uc_ = context-&gt;cfa; # Installing sudo make install # View system GCC and G&#43;&#43; locations which gcc # Adding Common Versions to the GCC and G&#43;&#43; Version Managers sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-11 110 sudo update-alternatives --install /usr/bin/g&#43;&#43; g&#43;&#43; /usr/bin/g&#43;&#43;-11 110 # Setting Up a Soft Link for GCC-6.">
+  <meta name="twitter:description" content="# Create GCC Storage Directory sudo mkdir /usr/local/gcc # Download the Source Code of GCC6.3.0 cd ~/Downloads wget https://ftp.gnu.org/gnu/gcc/gcc-6.3.0/gcc-6.3.0.tar.gz # Decompression tar -zxf gcc-6.3.0.tar.gz # Download and Compile Dependencies ./contrib/download_prerequisites # Configuring Compilation Options ./configure --prefix=/usr/local/gcc/gcc-6.3.0 --enable-threads=posix --disable-checking --disable-multilib --enable-languages=c,c&#43;&#43; --disable-libsanitizer # Compile the Source Code make # Fix GCC6.3.0 Source Compile Error # error: dereferencing pointer to incomplete type ‘struct ucontext’ (GCC8.1 does not have this error). vim ./x86_64-pc-linux-gnu/libgcc/md-unwind-support.h # Skip to Line 61 and Replace with struct ucontext_t *uc_ = context-&gt;cfa; # Installing sudo make install # View system GCC and G&#43;&#43; locations which gcc # Adding Common Versions to the GCC and G&#43;&#43; Version Managers sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-11 110 sudo update-alternatives --install /usr/bin/g&#43;&#43; g&#43;&#43; /usr/bin/g&#43;&#43;-11 110 # Setting Up a Soft Link for GCC-6.3.0 sudo ln -s /usr/local/gcc/gcc-6.3.0/bin/gcc /usr/bin/gcc-6 sudo ln -s /usr/local/gcc/gcc-6.3.0/bin/g&#43;&#43; /usr/bin/g&#43;&#43;-6 # Add GCC-6.3.0 to Version Manager sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-6 60 sudo update-alternatives --install /usr/bin/g&#43;&#43; g&#43;&#43; /usr/bin/g&#43;&#43;-6 60 # Switch the Current GCC Version sudo update-alternatives --config gcc sudo update-alternatives --config g&#43;&#43; # Check the GCC Version of the System gcc --version g&#43;&#43; --version">
 
   
   <script type="application/ld+json">
@@ -119,7 +172,7 @@
     "name": "Install GCC 6.3.0 on Ubuntu",
     "headline": "Install GCC 6.3.0 on Ubuntu",
     
-    "abstract": "# Create GCC Storage Directory sudo mkdir \/usr\/local\/gcc # Download the Source Code of GCC6.3.0 cd ~\/Downloads wget https:\/\/ftp.gnu.org\/gnu\/gcc\/gcc-6.3.0\/gcc-6.3.0.tar.gz # Decompression tar -zxf gcc-6.3.0.tar.gz # Download and Compile Dependencies .\/contrib\/download_prerequisites # Configuring Compilation Options .\/configure --prefix=\/usr\/local\/gcc\/gcc-6.3.0 --enable-threads=posix --disable-checking --disable-multilib --enable-languages=c,c\u002b\u002b --disable-libsanitizer # Compile the Source Code make # Fix GCC6.3.0 Source Compile Error # error: dereferencing pointer to incomplete type ‘struct ucontext’ (GCC8.1 does not have this error). vim .\/x86_64-pc-linux-gnu\/libgcc\/md-unwind-support.h # Skip to Line 61 and Replace with struct ucontext_t *uc_ = context-\u0026gt;cfa; # Installing sudo make install # View system GCC and G\u002b\u002b locations which gcc # Adding Common Versions to the GCC and G\u002b\u002b Version Managers sudo update-alternatives --install \/usr\/bin\/gcc gcc \/usr\/bin\/gcc-11 110 sudo update-alternatives --install \/usr\/bin\/g\u002b\u002b g\u002b\u002b \/usr\/bin\/g\u002b\u002b-11 110 # Setting Up a Soft Link for GCC-6.",
+    "abstract": "\u003cdiv class=\u0022highlight\u0022\u003e\u003cpre tabindex=\u00220\u0022 style=\u0022color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;\u0022\u003e\u003ccode class=\u0022language-bash\u0022 data-lang=\u0022bash\u0022\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e# Create GCC Storage Directory\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003esudo mkdir \/usr\/local\/gcc\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e# Download the Source Code of GCC6.3.0\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003ecd ~\/Downloads\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003ewget https:\/\/ftp.gnu.org\/gnu\/gcc\/gcc-6.3.0\/gcc-6.3.0.tar.gz\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e# Decompression\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003etar -zxf gcc-6.3.0.tar.gz\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e# Download and Compile Dependencies\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e.\/contrib\/download_prerequisites\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e# Configuring Compilation Options\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e.\/configure --prefix\u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003e\/usr\/local\/gcc\/gcc-6.3.0 --enable-threads\u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003eposix --disable-checking --disable-multilib --enable-languages\u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003ec,c\u002b\u002b --disable-libsanitizer\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e# Compile the Source Code\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003emake\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e# Fix GCC6.3.0 Source Compile Error\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e# error: dereferencing pointer to incomplete type ‘struct ucontext’ (GCC8.1 does not have this error).\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003evim .\/x86_64-pc-linux-gnu\/libgcc\/md-unwind-support.h\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e# Skip to Line 61 and Replace with\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003estruct ucontext_t *uc_ \u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003e context-\u0026gt;cfa;\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e# Installing\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003esudo make install\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e# View system GCC and G\u002b\u002b locations\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003ewhich gcc\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e# Adding Common Versions to the GCC and G\u002b\u002b Version Managers\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003esudo update-alternatives  --install \/usr\/bin\/gcc gcc \/usr\/bin\/gcc-11 \u003cspan style=\u0022color:#ae81ff\u0022\u003e110\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003esudo update-alternatives  --install \/usr\/bin\/g\u002b\u002b g\u002b\u002b \/usr\/bin\/g\u002b\u002b-11 \u003cspan style=\u0022color:#ae81ff\u0022\u003e110\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e# Setting Up a Soft Link for GCC-6.3.0\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003esudo ln -s \/usr\/local\/gcc\/gcc-6.3.0\/bin\/gcc \/usr\/bin\/gcc-6\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003esudo ln -s \/usr\/local\/gcc\/gcc-6.3.0\/bin\/g\u002b\u002b \/usr\/bin\/g\u002b\u002b-6\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e# Add GCC-6.3.0 to Version Manager\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003esudo update-alternatives --install \/usr\/bin\/gcc gcc \/usr\/bin\/gcc-6 \u003cspan style=\u0022color:#ae81ff\u0022\u003e60\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003esudo update-alternatives --install \/usr\/bin\/g\u002b\u002b g\u002b\u002b \/usr\/bin\/g\u002b\u002b-6 \u003cspan style=\u0022color:#ae81ff\u0022\u003e60\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e# Switch the Current GCC Version\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003esudo update-alternatives --config gcc\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003esudo update-alternatives --config g\u002b\u002b\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e# Check the GCC Version of the System\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003egcc --version\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003eg\u002b\u002b --version\n\u003c\/span\u003e\u003c\/span\u003e\u003c\/code\u003e\u003c\/pre\u003e\u003c\/div\u003e",
     "inLanguage": "en",
     "url" : "https:\/\/congyewang.github.io\/posts\/gcc6_compiling\/",
     "author" : {
@@ -166,7 +219,9 @@
   </script>
 
   
-  <meta name="author" content="Congye Wang" />
+  
+    <meta name="author" content="Congye Wang" />
+  
   
     
       <link href="https://github.com/congyewang" rel="me" />
@@ -186,15 +241,13 @@
 
 
 
-  
-  
-  
-  
-  
-  
-  
 
-
+  
+  
+  
+  
+  
+  
 
 
   
@@ -254,7 +307,7 @@
                   
                     <a
                       href="/posts/"
-                      title=""
+                      title="Posts"
                       onclick="close_menu()"
                       
                       ><span
@@ -271,7 +324,7 @@
                   
                     <a
                       href="/professional/"
-                      title=""
+                      title="Professional"
                       onclick="close_menu()"
                       
                       ><span
@@ -288,7 +341,7 @@
                   
                     <a
                       href="/papers/"
-                      title=""
+                      title="Papers"
                       onclick="close_menu()"
                       
                       ><span
@@ -305,7 +358,7 @@
                   
                     <a
                       href="/presentations/"
-                      title=""
+                      title="Presentations"
                       onclick="close_menu()"
                       
                       ><span
@@ -322,7 +375,7 @@
                   
                     <a
                       href="/contact/"
-                      title=""
+                      title="Contact"
                       onclick="close_menu()"
                       
                       ><span
@@ -348,7 +401,7 @@
               
                 <a
                   href="/posts/"
-                  title=""
+                  title="Posts"
                   
                   ><span
                       class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
@@ -364,7 +417,7 @@
               
                 <a
                   href="/professional/"
-                  title=""
+                  title="Professional"
                   
                   ><span
                       class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
@@ -380,7 +433,7 @@
               
                 <a
                   href="/papers/"
-                  title=""
+                  title="Papers"
                   
                   ><span
                       class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
@@ -396,7 +449,7 @@
               
                 <a
                   href="/presentations/"
-                  title=""
+                  title="Presentations"
                   
                   ><span
                       class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
@@ -412,7 +465,7 @@
               
                 <a
                   href="/contact/"
-                  title=""
+                  title="Contact"
                   
                   ><span
                       class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
@@ -581,13 +634,12 @@
         alt="Congye Wang"
         loading="lazy" decoding="async"
         
-          src="/img/author_hud719889e0f7acb40796cd39703a5df9c_1140876_660x0_resize_q75_box.jpg"
-          srcset="/img/author_hud719889e0f7acb40796cd39703a5df9c_1140876_330x0_resize_q75_box.jpg 330w,/img/author_hud719889e0f7acb40796cd39703a5df9c_1140876_660x0_resize_q75_box.jpg 660w
+          src="https://congyewang.github.io/img/author_hu_45a68a0aeb2cface.jpg" srcset="https://congyewang.github.io/img/author_hu_afd1c014e8a297dc.jpg 330w,https://congyewang.github.io/img/author_hu_45a68a0aeb2cface.jpg 660w
           
-            ,/img/author_hud719889e0f7acb40796cd39703a5df9c_1140876_1024x0_resize_q75_box.jpg 1024w
+            ,https://congyewang.github.io/img/author_hu_724ec85f21db392a.jpg 1024w
           
           
-            ,/img/author_hud719889e0f7acb40796cd39703a5df9c_1140876_1320x0_resize_q75_box.jpg 1320w
+            ,https://congyewang.github.io/img/author_hu_83c475eea617dd35.jpg 1320w
           "
           sizes="100vw"
         
@@ -672,6 +724,40 @@
       
 
       
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+      <div class="flex justify-between pt-3">
+        <span>
+          
+        </span>
+        <span>
+          
+            <a class="group flex text-right" href="https://congyewang.github.io/posts/pytorch_ppc64le/">
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >Compilling PyTorch on Power9 ppc64le</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2025-10-14 00:00:00 &#43;0000 UTC">14 October 2025</time>
+                  
+                </span>
+              </span>
+              <span
+                class="ms-2 text-neutral-700 transition-transform group-hover:-translate-x-[-2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&rarr;</span
+                ><span class="ltr:hidden rtl:inline">&larr;</span></span
+              >
+            </a>
+          
+        </span>
+      </div>
+    </div>
   
 
 
