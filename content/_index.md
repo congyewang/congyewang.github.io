@@ -1,12 +1,14 @@
 ---
 title: "Profile"
-date: "29 Jul 2024"
+date: "22 Jan 2026"
 ---
 
 I am presently a final-year PhD candidate pursuing a degree in Mathematics at Newcastle University in the UK, under the supervision of [Professor Chris Oates](https://oates.work/). My research primarily concentrates on computational statistics and probabilistic machine learning.
 
 {{< left >}}
 ### News
+
+- Our research on [**Harnessing the Power of Reinforcement Learning for Adaptive MCMC**](https://arxiv.org/abs/2507.00671) has been accepted at AISTATS 2026.
 
 - Our research on [**Reinforcement Learning for Adaptive MCMC**](https://arxiv.org/abs/2405.13574) has been accepted at AISTATS 2025.
 

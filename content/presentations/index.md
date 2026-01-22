@@ -1,8 +1,11 @@
 ---
 title: "Presentations"
-date: "29 Jul 2024"
+date: "22 Jan 2026"
 ---
 
+## 2026
+
+- Harnessing the Power of Reinforcement Learning for Adaptive MCMC. [AISTATS](https://virtual.aistats.org/Conferences/2026), Tangier, Morocco. 2-5 May.
 
 ## 2025
 

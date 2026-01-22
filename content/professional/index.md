@@ -13,13 +13,15 @@ date: "28 Jun 2025"
 
 ## Reviewing Services
 
-- Conference on Neural Information Processing Systems (NeurIPS)
-
-- Uncertainty in Artificial Intelligence (UAI)
-
 - Asian Conference on Machine Learning (ACML)
 
+- Artificial Intelligence and Statistics (AISTATS)
+
+- Conference on Neural Information Processing Systems (NeurIPS)
+
 - Machine Learning
+
+- Uncertainty in Artificial Intelligence (UAI)
 
 ## Teaching Services
 
