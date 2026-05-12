@@ -5,7 +5,7 @@ date: "28 Jun 2025"
 
 ## Education
 
-- 2022 - Present  PhD Mathematics, Newcastle University, UK.
+- 2022 - 2026  PhD Mathematics, Newcastle University, UK.
 
 - 2020 - 2021  MSc Statistics, Lancaster University, UK.
 

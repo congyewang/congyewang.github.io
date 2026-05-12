@@ -1,7 +1,11 @@
 ---
 title: "Papers"
-date: "29 Jul 2024"
+date: "12 May 2026"
 ---
+
+## When Does Trimming Help Conformal Prediction? A Retained-Law Diagnostic under Calibration Contamination
+
+Wang, C. (2026). *When Does Trimming Help Conformal Prediction? A Retained-Law Diagnostic under Calibration Contamination*. arXiv preprint arXiv:2605.06204. [[arXiv]](https://arxiv.org/abs/2605.06204)
 
 ## Harnessing the Power of Reinforcement Learning for Adaptive MCMC
 

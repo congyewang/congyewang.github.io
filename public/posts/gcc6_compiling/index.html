@@ -4,7 +4,6 @@
 
 
 
-
 <!doctype html>
 <html
   lang="en"
@@ -40,8 +39,8 @@
   <link
     type="text/css"
     rel="stylesheet"
-    href="https://congyewang.github.io/css/main.bundle.min.a645f3fa02b2ca20e7ef61b236048d95cc9bc2e5b2faf1f0ac0aa85431187c1c.css"
-    integrity="sha256-pkXz&#43;gKyyiDn72GyNgSNlcybwuWy&#43;vHwrAqoVDEYfBw="
+    href="https://congyewang.github.io/css/main.bundle.min.100caa677b4bc416cdd884107b203b4869f9b413a19aa57d12069fb826f1abe9.css"
+    integrity="sha256-EAyqZ3tLxBbN2IQQeyA7SGn5tBOhmqV9EgafuCbxq&#43;k="
   />
   
   
@@ -60,8 +59,8 @@
       defer
       type="text/javascript"
       id="script-bundle"
-      src="https://congyewang.github.io/js/main.bundle.min.eb18dcb25558ad5dcbc8a080261d2f3b2957309098f6f19a294cefb78492bfc7.js"
-      integrity="sha256-6xjcslVYrV3LyKCAJh0vOylXMJCY9vGaKUzvt4SSv8c="
+      src="https://congyewang.github.io/js/main.bundle.min.262eb3f1955172e5b9527c1b44eac810ff0aab29d1e042952899c863c5c8a6a7.js"
+      integrity="sha256-Ji6z8ZVRcuW5UnwbROrIEP8KqynR4EKVKJnIY8XIpqc="
       data-copy="Copy"
       data-copied="Copied"
     ></script>
@@ -172,7 +171,7 @@ g&#43;&#43; --version
     "name": "Install GCC 6.3.0 on Ubuntu",
     "headline": "Install GCC 6.3.0 on Ubuntu",
     
-    "abstract": "\u003cdiv class=\u0022highlight\u0022\u003e\u003cpre tabindex=\u00220\u0022 style=\u0022color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;\u0022\u003e\u003ccode class=\u0022language-bash\u0022 data-lang=\u0022bash\u0022\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e# Create GCC Storage Directory\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003esudo mkdir \/usr\/local\/gcc\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e# Download the Source Code of GCC6.3.0\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003ecd ~\/Downloads\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003ewget https:\/\/ftp.gnu.org\/gnu\/gcc\/gcc-6.3.0\/gcc-6.3.0.tar.gz\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e# Decompression\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003etar -zxf gcc-6.3.0.tar.gz\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e# Download and Compile Dependencies\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e.\/contrib\/download_prerequisites\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e# Configuring Compilation Options\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e.\/configure --prefix\u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003e\/usr\/local\/gcc\/gcc-6.3.0 --enable-threads\u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003eposix --disable-checking --disable-multilib --enable-languages\u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003ec,c\u002b\u002b --disable-libsanitizer\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e# Compile the Source Code\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003emake\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e# Fix GCC6.3.0 Source Compile Error\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e# error: dereferencing pointer to incomplete type ‘struct ucontext’ (GCC8.1 does not have this error).\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003evim .\/x86_64-pc-linux-gnu\/libgcc\/md-unwind-support.h\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e# Skip to Line 61 and Replace with\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003estruct ucontext_t *uc_ \u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003e context-\u0026gt;cfa;\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e# Installing\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003esudo make install\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e# View system GCC and G\u002b\u002b locations\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003ewhich gcc\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e# Adding Common Versions to the GCC and G\u002b\u002b Version Managers\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003esudo update-alternatives  --install \/usr\/bin\/gcc gcc \/usr\/bin\/gcc-11 \u003cspan style=\u0022color:#ae81ff\u0022\u003e110\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003esudo update-alternatives  --install \/usr\/bin\/g\u002b\u002b g\u002b\u002b \/usr\/bin\/g\u002b\u002b-11 \u003cspan style=\u0022color:#ae81ff\u0022\u003e110\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e# Setting Up a Soft Link for GCC-6.3.0\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003esudo ln -s \/usr\/local\/gcc\/gcc-6.3.0\/bin\/gcc \/usr\/bin\/gcc-6\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003esudo ln -s \/usr\/local\/gcc\/gcc-6.3.0\/bin\/g\u002b\u002b \/usr\/bin\/g\u002b\u002b-6\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e# Add GCC-6.3.0 to Version Manager\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003esudo update-alternatives --install \/usr\/bin\/gcc gcc \/usr\/bin\/gcc-6 \u003cspan style=\u0022color:#ae81ff\u0022\u003e60\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003esudo update-alternatives --install \/usr\/bin\/g\u002b\u002b g\u002b\u002b \/usr\/bin\/g\u002b\u002b-6 \u003cspan style=\u0022color:#ae81ff\u0022\u003e60\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e# Switch the Current GCC Version\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003esudo update-alternatives --config gcc\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003esudo update-alternatives --config g\u002b\u002b\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e# Check the GCC Version of the System\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003egcc --version\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003eg\u002b\u002b --version\n\u003c\/span\u003e\u003c\/span\u003e\u003c\/code\u003e\u003c\/pre\u003e\u003c\/div\u003e",
+    "abstract": "\u003cdiv class=\u0022highlight\u0022\u003e\u003cpre tabindex=\u00220\u0022 style=\u0022color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;\u0022\u003e\u003ccode class=\u0022language-bash\u0022 data-lang=\u0022bash\u0022\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e# Create GCC Storage Directory\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003esudo mkdir \/usr\/local\/gcc\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e# Download the Source Code of GCC6.3.0\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003ecd ~\/Downloads\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003ewget https:\/\/ftp.gnu.org\/gnu\/gcc\/gcc-6.3.0\/gcc-6.3.0.tar.gz\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e# Decompression\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003etar -zxf gcc-6.3.0.tar.gz\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e# Download and Compile Dependencies\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e.\/contrib\/download_prerequisites\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e# Configuring Compilation Options\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e.\/configure --prefix\u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003e\/usr\/local\/gcc\/gcc-6.3.0 --enable-threads\u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003eposix --disable-checking --disable-multilib --enable-languages\u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003ec,c\u002b\u002b --disable-libsanitizer\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e# Compile the Source Code\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003emake\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e# Fix GCC6.3.0 Source Compile Error\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e# error: dereferencing pointer to incomplete type ‘struct ucontext’ (GCC8.1 does not have this error).\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003evim .\/x86_64-pc-linux-gnu\/libgcc\/md-unwind-support.h\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e# Skip to Line 61 and Replace with\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003estruct ucontext_t *uc_ \u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003e context-\u0026gt;cfa;\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e# Installing\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003esudo make install\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e# View system GCC and G\u002b\u002b locations\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003ewhich gcc\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e# Adding Common Versions to the GCC and G\u002b\u002b Version Managers\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003esudo update-alternatives  --install \/usr\/bin\/gcc gcc \/usr\/bin\/gcc-11 \u003cspan style=\u0022color:#ae81ff\u0022\u003e110\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003esudo update-alternatives  --install \/usr\/bin\/g\u002b\u002b g\u002b\u002b \/usr\/bin\/g\u002b\u002b-11 \u003cspan style=\u0022color:#ae81ff\u0022\u003e110\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e# Setting Up a Soft Link for GCC-6.3.0\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003esudo ln -s \/usr\/local\/gcc\/gcc-6.3.0\/bin\/gcc \/usr\/bin\/gcc-6\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003esudo ln -s \/usr\/local\/gcc\/gcc-6.3.0\/bin\/g\u002b\u002b \/usr\/bin\/g\u002b\u002b-6\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e# Add GCC-6.3.0 to Version Manager\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003esudo update-alternatives --install \/usr\/bin\/gcc gcc \/usr\/bin\/gcc-6 \u003cspan style=\u0022color:#ae81ff\u0022\u003e60\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003esudo update-alternatives --install \/usr\/bin\/g\u002b\u002b g\u002b\u002b \/usr\/bin\/g\u002b\u002b-6 \u003cspan style=\u0022color:#ae81ff\u0022\u003e60\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e# Switch the Current GCC Version\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003esudo update-alternatives --config gcc\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003esudo update-alternatives --config g\u002b\u002b\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e# Check the GCC Version of the System\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003egcc --version\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003eg\u002b\u002b --version\n\u003c\/span\u003e\u003c\/span\u003e\u003c\/code\u003e\u003c\/pre\u003e\u003c\/div\u003e",
     "inLanguage": "en",
     "url" : "https:\/\/congyewang.github.io\/posts\/gcc6_compiling\/",
     "author" : {
@@ -310,6 +309,7 @@ g&#43;&#43; --version
                       title="Posts"
                       onclick="close_menu()"
                       
+                      
                       ><span
                           class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
                           >Posts</span
@@ -326,6 +326,7 @@ g&#43;&#43; --version
                       href="/professional/"
                       title="Professional"
                       onclick="close_menu()"
+                      
                       
                       ><span
                           class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
@@ -344,6 +345,7 @@ g&#43;&#43; --version
                       title="Papers"
                       onclick="close_menu()"
                       
+                      
                       ><span
                           class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
                           >Papers</span
@@ -361,6 +363,7 @@ g&#43;&#43; --version
                       title="Presentations"
                       onclick="close_menu()"
                       
+                      
                       ><span
                           class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
                           >Presentations</span
@@ -377,6 +380,7 @@ g&#43;&#43; --version
                       href="/contact/"
                       title="Contact"
                       onclick="close_menu()"
+                      
                       
                       ><span
                           class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
@@ -403,6 +407,7 @@ g&#43;&#43; --version
                   href="/posts/"
                   title="Posts"
                   
+                  
                   ><span
                       class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
                       >Posts</span
@@ -418,6 +423,7 @@ g&#43;&#43; --version
                 <a
                   href="/professional/"
                   title="Professional"
+                  
                   
                   ><span
                       class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
@@ -435,6 +441,7 @@ g&#43;&#43; --version
                   href="/papers/"
                   title="Papers"
                   
+                  
                   ><span
                       class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
                       >Papers</span
@@ -451,6 +458,7 @@ g&#43;&#43; --version
                   href="/presentations/"
                   title="Presentations"
                   
+                  
                   ><span
                       class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
                       >Presentations</span
@@ -466,6 +474,7 @@ g&#43;&#43; --version
                 <a
                   href="/contact/"
                   title="Contact"
+                  
                   
                   ><span
                       class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
@@ -546,7 +555,7 @@ g&#43;&#43; --version
     <section class="prose mt-0 flex max-w-full flex-col dark:prose-invert lg:flex-row">
       
       <div class="min-h-0 min-w-0 max-w-prose grow">
-        <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Create GCC Storage Directory</span>
+        <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Create GCC Storage Directory</span>
 </span></span><span style="display:flex;"><span>sudo mkdir /usr/local/gcc
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># Download the Source Code of GCC6.3.0</span>

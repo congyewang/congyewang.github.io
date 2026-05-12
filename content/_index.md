@@ -8,6 +8,8 @@ I am presently a final-year PhD candidate pursuing a degree in Mathematics at Ne
 {{< left >}}
 ### News
 
+- I am delighted to announce that I will join the MARS Centre at Lancaster University as a Senior Research Associate from August 2026.
+
 - Our research on [**Harnessing the Power of Reinforcement Learning for Adaptive MCMC**](https://arxiv.org/abs/2507.00671) has been accepted at AISTATS 2026.
 
 - Our research on [**Reinforcement Learning for Adaptive MCMC**](https://arxiv.org/abs/2405.13574) has been accepted at AISTATS 2025.

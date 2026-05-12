@@ -1,9 +1,11 @@
 ---
 title: "Presentations"
-date: "22 Jan 2026"
+date: "12 May 2026"
 ---
 
 ## 2026
+
+- Reinforcement Learning for Adaptive MCMC. [MCQMC](https://maths.ed.ac.uk/events/mcqmc-2026), The University of Edinburgh, UK. 8-12 Jun.
 
 - Harnessing the Power of Reinforcement Learning for Adaptive MCMC. [AISTATS](https://virtual.aistats.org/Conferences/2026), Tangier, Morocco. 2-5 May.
 
